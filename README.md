@@ -4,8 +4,9 @@ Gloria Kwako 👾
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
+Voor deze opdracht heb ik gekozen om voor het nieuwe bedrijf Banana Peely Company het logo te animeren, dit bedrijf is opgestart door een paar laatste jaars studenten (onder wie mijn eigen zus) van de opleiding Food Commerce and Technology in Amsterdam.
 
-
+Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook meteen een leuk idee vond om voor het vak FvD een animatie van hun logo te maken. 
 
 ## Bronnenlijst
   1. -bron 1-
