@@ -21,6 +21,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Opdracht 1 plan
+Voor deze opdracht heb ik gekozen om voor het nieuwe bedrijf Banana Peely Company het logo te animeren, dit bedrijf is opgestart door een paar laatste jaars studenten (onder wie mijn eigen zus) van de opleiding Food Commerce and Technology in Amsterdam.
+
+Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook meteen een leuk idee vond om voor het vak FvD een animatie van hun logo te maken. 
 
 <details open>
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
