@@ -32,10 +32,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Dark en licht mode, dit wordt een uitdaging omdat ik niet veel kennis heb over CSS maar wel de motivatie om het uit te proberen.
+  - Elementen geleidelijk laten vallen, daar moet ik onderzoek voor doen.
+  - Elemeten laten groeien
  
 </details>
 
