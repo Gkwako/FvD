@@ -1,0 +1,202 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+			 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-background:#eee;
+	/* --color-earth: #21302E;  */
+	--color-letters: #722620;
+}
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	height: 100vh;
+	width: 100vw;
+
+	font-family:eenfont, sans-serif;
+	background-color:var(--color-background);
+
+	position: relative;
+	top: 5em;
+}
+
+
+/* logo naam plaatsing*/
+h1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color:var(--color-letters);
+	margin: 50em;
+}
+
+/* naam "banana" plaatsing */
+h1 > span:first-of-type {
+	font-size: 3em;
+	line-height: .9em;
+	margin-top: -.2em;
+}
+
+h1:hover span:first-of-type{
+	animation: falling 2.2s ease-out;
+}
+
+@keyframes falling {
+	0%{
+	
+	}
+	20%{
+	
+	}
+	40%{
+	
+	}
+	55%{
+	
+	}
+	80%{
+		
+	}
+	90%{
+	
+	}
+	95%{
+		transform: rotate(10deg) translate(40px,40px);
+	}
+	100%{
+		
+	}
+	
+}
+
+
+/* @keyframes shake {
+	80%, 90% {
+	transform: none;
+	}
+	90%{
+		transform: translateY(900px);	
+	}
+	100%{
+
+	}
+} */
+
+
+
+/* 2e naam "peel company*/
+h1 > span:last-of-type {
+	font-size: 1.2em;
+	word-spacing: .2em;
+}
+
+
+
+
+
+/* banana img styling */
+h1 > img{
+	width: 12em;
+	margin-right: 1em;
+}
+
+
+h1:hover img:first-of-type{
+	transform-origin: top left;
+	transform: translateX(0);
+	animation: bananaDrop 2.2s ease-in-out;
+}
+
+/* animatie banaan */
+@keyframes bananaDrop {
+	0% {
+		transform: translateY(0);
+		position: relative;
+		top: -330px;
+	}  
+	20%, 60% {
+		transform: rotate(70deg);
+	}
+	40%, 80%{
+		transform: rotate(55deg);
+	}
+	80%, 90% {
+		transform: translate3d(0, 230px, 0);
+	}
+	90%, 100% {
+		position: relative;
+		top: -330px;
+		transform: translate3d(0, 330px, 0);
+	} 
+}
+/* Bron: https://www.youtube.com/watch?v=YszONjKpgg4 */
+
+
+
+.earth{
+	position: absolute;
+	top: -260px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	background-image: url("../images/earth-07.png");
+	z-index: -1;
+	border-radius: 50%;
+	background-size: cover;
+	box-shadow:-20px -20px 50px 2px #000 inset,;
+}
+
+h1:hover + .earth{
+	animation:spin 100s linear alternate infinite;
+}
+
+@keyframes spin{
+	100%{background-position: 100%;}
+}
+
+
+/* box-shadow:-20px -20px 50px 2px #000 inset, 0 0 20pz 2px #000; */
+/* Bron: https://www.youtube.com/watch?v=9HXpirUu_H4 */
+
+
+
