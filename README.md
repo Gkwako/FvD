@@ -49,9 +49,9 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
 
   Dit zijn de animaties die ik heb toegevoegd:
-    <img src="readme-images/1/3.png" width="375px" alt="uitomst opdracht 1">
-    <img src="readme-images/2/3.png" width="375px" alt="uitomst opdracht 1">
-    <img src="readme-images/3/3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/1:3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/2:3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/3:3.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit was lastig/Is niet gelukt:
   Het is mij helaas niet gelukt om de graan toe te voegen die bij de logo hoort, ook heb ik niet veel tijd kunnen besteden aan de light mode omdat ik erg gefocussed was op de darkmode "wat super toff was!"
