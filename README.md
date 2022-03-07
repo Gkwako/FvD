@@ -8,10 +8,6 @@ Voor deze opdracht heb ik gekozen om voor het nieuwe bedrijf Banana Peely Compan
 
 Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook meteen een leuk idee vond om voor het vak FvD een animatie van hun logo te maken. 
 
-## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
 
 ## Opdracht 1 plan
 
@@ -27,7 +23,6 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   Aan deze technieken/punten wil ik werken:
   - Dark en licht mode, dit wordt een uitdaging omdat ik niet veel kennis heb over CSS maar wel de motivatie om het uit te proberen.
   - Elementen geleidelijk laten vallen, daar moet ik onderzoek voor doen.
-  - Elemeten laten groeien
  
 </details>
 
@@ -40,19 +35,28 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/darkmode.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Bij de darkmode is het mij gelukt om een leuke schaduw toe te voegen bij de letters en natuurlijk de dark mode zelf.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  Hier zie je als je computer dark mode aan heeft dat de layout helemaal veranderd is naar dark: 
+  <img src="readme-images/darkmode.png" width="375px" alt="uitomst opdracht 1">
 
+  En bij de light mode is alles juist lichter: 
+  <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
+
+  Dit zijn de animaties die ik heb toegevoegd:
+    <img src="readme-images/1/3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/2/3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/3/3.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Het is mij helaas niet gelukt om de graan toe te voegen die bij de logo hoort, ook heb ik niet veel tijd kunnen besteden aan de light mode omdat ik erg gefocussed was op de darkmode "wat super toff was!"
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
 </details>
 
 
@@ -128,3 +132,10 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
+
+
+
+## Bronnenlijst
+  1. - Animatie drop: https://www.youtube.com/watch?v=YszONjKpgg4 (regel: 148)
+  2. - Earth spin: https://www.youtube.com/watch?v=9HXpirUu_H4 (regel: 173)
+  3. -...-
