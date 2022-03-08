@@ -42,7 +42,7 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   ### Dit ging goed/Heb ik geleerd: 
   Bij de darkmode is het mij gelukt om een leuke schaduw toe te voegen bij de letters en natuurlijk de dark mode zelf.
 
-  Hier zie je als je computer dark mode aan heeft dat de layout helemaal veranderd is naar dark: 
+  Hier zie je als je computer dark mode aan heeft staan dat de layout helemaal veranderd is naar dark: 
   <img src="readme-images/darkmode.png" width="375px" alt="uitomst opdracht 1">
 
   En bij de light mode is alles juist lichter: 
@@ -52,9 +52,12 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
     <img src="readme-images/1:3.png" width="375px" alt="uitomst opdracht 1">
     <img src="readme-images/2:3.png" width="375px" alt="uitomst opdracht 1">
     <img src="readme-images/3:3.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/1:2.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/2:2.png" width="375px" alt="uitomst opdracht 1">
+    
 
   ### Dit was lastig/Is niet gelukt:
-  Het is mij helaas niet gelukt om de graan toe te voegen die bij de logo hoort, ook heb ik niet veel tijd kunnen besteden aan de light mode omdat ik erg gefocussed was op de darkmode "wat super toff was!"
+  Het is mij helaas niet gelukt om de planten toe te voegen die bij de logo hoort, ook heb ik niet veel tijd kunnen besteden aan de light mode omdat ik erg gefocussed was op de darkmode "wat super toff was!"
 
   <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
 </details>
@@ -138,4 +141,7 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 ## Bronnenlijst
   1. - Animatie drop: https://www.youtube.com/watch?v=YszONjKpgg4 (regel: 148)
   2. - Earth spin: https://www.youtube.com/watch?v=9HXpirUu_H4 (regel: 173)
-  3. -...-
+  3. - Dark mode: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level (regel: 355)
+  4. - Neon: https://css-tricks.com/how-to-create-neon-text-with-css/ (regel: 260)
+  5. - Fall: https://www.youtube.com/watch?v=YszONjKpgg4 (regel: 221)
+  6. text appears: https://www.youtube.com/watch?v=PP0Os0UvMCs&t=89s (regel: 150)
