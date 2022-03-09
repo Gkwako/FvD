@@ -1,0 +1,389 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+
+/*--------------------------FONTS--------------------------*/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*--------------------------CUSTOM PROPERTIES--------------------------*/
+:root {
+	--color-white: #eee;
+	--color-black: black;
+	--color-red: #722620;
+	--color-green: #548153;
+
+	--color-shiningBase: #0fa;
+
+	--font-family: eenfont, sans-serif;
+}
+
+
+
+/*--------------------------BODY STYLING--------------------------*/
+/* styling + plaatsing van de body */
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	position: relative;
+	top: 5em;
+
+	height: 100vh;
+	width: 100vw;
+
+	font-family: var(--font-family);
+	background-color: var(--color-white);
+}
+
+
+
+/*--------------------------STYLING VAN DE LOGO--------------------------*/
+/* plaatsing van de h1 elementen (logo+naam) */
+h1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	/* margin: 50em; */
+
+	color: var(--color-red);
+}
+
+
+/*--------------------------STYLING VAN BANANA + ANIMATIE--------------------------*/
+/* styling van de naam "banana" (plaatsing+grote)*/
+h1>span:nth-of-type(3) {
+	font-size: 3em;
+	line-height: .9em;
+	margin-top: -.2em;
+}
+
+
+/* animatie voor de hoofd tekst "banana" */
+@keyframes bananaFall {
+	20% {
+		opacity: 1;
+		transform: translateY(400px);
+	}
+	70% {
+		opacity: .5;
+	}
+	80%, 90% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+h1:hover>span:nth-of-type(3) {
+	animation: bananaFall 5s;
+}
+
+
+
+/*--------------------------STYLING VAN PEELY COMPANY--------------------------*/
+/* styling van de naam "peely company" (grote)*/
+h1>span:nth-of-type(4) {
+	font-size: 1.2em;
+	word-spacing: .2em;
+}
+
+
+/*--------------------------STYLING VAN BANANA AFBEELDING + ANIMATIE--------------------------*/
+/* styling van img banaan (plaatsing+grote)*/
+h1>img {
+	width: 12em;
+	margin-right: 1em;
+}
+
+
+/* animatie voor de afbeelding banaan, banaan hangt op zijn eigen positie heen en weer */
+@keyframes bananaHang {
+	0% {
+		transform: translateY(0);
+	}
+	20%, 60% {
+		transform: rotate(70deg);
+	}
+	40%, 80% {
+		transform: rotate(55deg);
+	}
+}
+
+h1:hover img:first-of-type {
+	transform-origin: top left;
+	animation: bananaHang 2.2s ease-in-out;
+}
+
+/* Bron: https://www.youtube.com/watch?v=YszONjKpgg4 */
+
+
+
+
+/*--------------------------STYLING VAN TEKST "LET'S GO DARK"--------------------------*/
+/* plaatsing van de tekst "let's go dark" */
+.dark {
+	position: relative;
+	top: -6em;
+	margin: -1em;
+}
+
+/* styling van de zin "dark" */
+.dark:first-of-type span {
+	color: var(--color-black);
+}
+
+
+/*--------------------------STYLING VAN TEKST "LET'S GO DARK" + ANIMATIE--------------------------*/
+/* styling van tekst + animatie *//* Bron: https://www.youtube.com/watch?v=PP0Os0UvMCs&t=89s */
+.dark:before {
+	content: '';
+	position: absolute;
+	left: -15%;
+	width: 120%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent 0%, #eee 5%, #eee 100%);
+}
+
+@keyframes textAppears {
+	40% {
+		left: -15%;
+	}
+
+	100% {
+		left: 100%;
+	}
+}
+
+h1:hover .dark:before {
+	animation: textAppears 5s linear forwards;
+}
+
+
+
+
+
+/*--------------------------STYLING VAN AARDBOL + ANIMATIE--------------------------*/
+/* styling van aardbol */
+/* Bron: https://www.youtube.com/watch?v=9HXpirUu_H4 */
+.earth {
+	position: absolute;
+	top: -260px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	background-image: url("../images/earth-07.png");
+	z-index: -1;
+	border-radius: 50%;
+	background-size: cover;
+	box-shadow: -20px -20px 50px 2px #000 inset, ;
+}
+
+h1:hover+.earth {
+	animation: spin 100s linear alternate infinite;
+}
+
+@keyframes spin {
+	100% {
+		background-position: 100%;
+	}
+}
+
+
+/*--------------------------DARK MODE--------------------------*/
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: var(--color-black);
+	}
+
+	h1 {
+		color: var(--color-green);
+	}
+
+
+
+
+	@keyframes bananaDrop
+	/* animatie banaan */{
+		0% {
+			transform: translateY(0);
+			position: relative;
+			top: -355px;
+		}
+		20%, 60% {
+			transform: rotate(70deg);
+		}
+		40%, 80% {
+			transform: rotate(55deg);
+		}
+		80%, 90% {
+			transform: translate3d(0, 230px, 0);
+		}
+		90%, 100% {
+			position: relative;
+			top: -355px;
+			transform: translate3d(0, 355px, 0);
+		}
+	}
+
+	h1:hover img:first-of-type {
+		transform-origin: top left;
+		animation: bananaDrop 2.2s ease-in-out;
+	}
+	/* Bron: https://www.youtube.com/watch?v=YszONjKpgg4 */
+
+
+
+
+	.earth {
+		background-image: url("../images/earth-08.png");
+	}
+
+
+
+
+	@keyframes banana-shining 
+	/* animatie peely company neon*/{
+		18%, 22%, 25%, 57%, 100% {
+			text-shadow:
+				0 0 4px var(--color-white),
+				0 0 11px var(--color-white),
+				0 0 19px var(--color-white),
+
+				0 0 40px var(--color-shiningBase),
+				0 0 80px var(--color-shiningBase),
+				0 0 90px var(--color-shiningBase),
+				0 0 100px var(--color-shiningBase),
+				0 0 150px var(--color-shiningBase);
+		}
+		0%, 5%, 10%, 20%, 24%, 55% {
+			text-shadow: none;
+		}
+	}
+
+	h1:hover span:nth-of-type(4) {
+		animation: banana-shining .75s linear forwards;
+	}
+	/* Bron: https://css-tricks.com/how-to-create-neon-text-with-css/ */
+
+
+
+
+	@keyframes falling 
+	/* animatie banana tekst (fall) */{
+		0%, 95% {
+			transform: none;
+		}
+		95% {
+			transform: rotate(10deg) translate(40px, 40px);
+		}
+		100% {
+			transform: none;
+		}
+	}
+
+	h1:hover span:nth-of-type(3) {
+		animation: falling 2.2s ease-out;
+	}
+
+
+
+	/* tekst "let there be light" is hidden */
+	.dark {
+		visibility: hidden;
+	}
+
+
+	/* styling van de zin "light" */
+	.light {
+		position: relative;
+		top: -6em;
+	}
+	
+	/* styling van de zin "light" */
+	.light span:nth-of-type(1){
+		color: var(--color-white);
+	}
+
+	.light:before {
+		content: '';
+		position: absolute;
+		left: -15%;
+		width: 120%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent 0%, black 5%, black 100%);
+	}
+	
+	@keyframes textAppears {
+		40% {
+			left: -15%;
+		}
+		100% {
+			left: 100%;
+		}
+	}
+	
+	h1:hover .light:before {
+		animation: textAppears 5s linear forwards;
+	}
+}
+
+
+
+
+/*--------------------------LIGHT MODE--------------------------*/
+@media (prefers-color-scheme: light) {
+	.light {
+		visibility: hidden;
+	}
+	
+	/* Bron: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level */
+}
+
+
+
+@media all and (max-width: 370px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	h1>span:nth-of-type(3) {
+		font-size: 2.5em;
+	}
+	h1>span:nth-of-type(4) {
+		font-size: 1em;
+	}
+	h1>img {
+		width: 10.5em;
+		margin-top: -5em;
+	}
+	.earth {
+		width: 280px;
+		height: 280px;
+	}
+	.dark {
+		position: relative;
+		top: -7.5em;
+		margin: 0 2.5em 0;
+	}
+	.light {
+		position: relative;
+		top: -10.5em;
+		margin: 0 2.5em 0;
+	}
+  }
