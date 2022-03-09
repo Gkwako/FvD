@@ -40,7 +40,7 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Bij de darkmode is het mij gelukt om een leuke schaduw toe te voegen bij de letters en natuurlijk de dark mode zelf.
+  Bij de darkmode is het mij gelukt om een leuke schaduw toe te voegen bij de letters en natuurlijk de dark mode zelf. Git!
 
   Hier zie je als je computer dark mode aan heeft staan dat de layout helemaal veranderd is naar dark: 
   <img src="readme-images/darkmode.png" width="375px" alt="uitomst opdracht 1">
