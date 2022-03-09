@@ -52,8 +52,8 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
     <img src="readme-images/1:3.png" width="375px" alt="uitomst opdracht 1">
     <img src="readme-images/2:3.png" width="375px" alt="uitomst opdracht 1">
     <img src="readme-images/3:3.png" width="375px" alt="uitomst opdracht 1">
-    <img src="readme-images/1:2.png" width="375px" alt="uitomst opdracht 1">
-    <img src="readme-images/2:2.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/12.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/22.png" width="375px" alt="uitomst opdracht 1">
     
 
   ### Dit was lastig/Is niet gelukt:
