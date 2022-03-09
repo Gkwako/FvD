@@ -153,8 +153,11 @@ h1:hover img:first-of-type {
 	left: -15%;
 	width: 120%;
 	height: 100%;
-	background: linear-gradient(90deg, transparent 0%, #eee 5%, #eee 100%);
-	background: -webkit-linear-gradient(90deg, transparent 0%, #eee 5%, #eee 100%)
+	background: linear-gradient(90deg, #eee 5%, #eee 100%);
+
+	background-color: #eee; /* fallback color if gradients are not supported */
+	background-image: -webkit-linear-gradient(90deg, #eee 5%, #eee 100%); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+
 }
 
 @keyframes textAppears {
