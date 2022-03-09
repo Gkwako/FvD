@@ -38,8 +38,8 @@ body {
 	justify-content: center;
 	flex-direction: column;
 
-	position: relative;
-	top: 5em;
+	/* position: relative;
+	top: 5em; */
 
 	height: 100vh;
 	width: 100vw;
@@ -179,7 +179,7 @@ h1:hover .dark:before {
 /* Bron: https://www.youtube.com/watch?v=9HXpirUu_H4 */
 .earth {
 	position: absolute;
-	top: -260px;
+	top: -105px;
 	bottom: 0;
 	margin: auto;
 	width: 300px;
@@ -354,6 +354,11 @@ h1:hover+.earth {
 	/* Bron: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#os-level */
 }
 
+.container{
+	display: flex;
+	justify-content: center;
+	margin-top: 8em;
+}
 
 
 @media all and (max-width: 500px) {
