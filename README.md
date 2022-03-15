@@ -59,10 +59,6 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   ### Dit was lastig/Is niet gelukt:
   Het is mij helaas niet gelukt om de planten toe te voegen die bij de logo hoort, ook heb ik niet veel tijd kunnen besteden aan de light mode omdat ik erg gefocussed was op de darkmode "wat super toff was!"
 
-
-  ### Beoordeling:
-  Div's eruit halen en meer nth-of-type gebruiken. 
-
   <img src="readme-images/lightmode.png" width="375px" alt="uitomst opdracht 1">
 </details>
 
@@ -75,14 +71,14 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/schets2" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Alles responsief maken
+  - Met verschillende bedieningen werken
+  - Animaties
   - ...
 </details>
 
