@@ -1,8 +1,10 @@
-/* CSS Document */
+/* ---------------------CSS DOCUMENT OPMAAK---------------------*/
+*, *::after, *::before {
+	box-sizing:border-box;  
+	margin: 0;
+  }
 
-/*********/
-/* FONTS */
-/*********/
+  
 @font-face {
 	font-family: 'eenfont';
 	src: url('../fonts/eenfont.woff2') format('woff2'),
@@ -14,44 +16,95 @@
 
 
 
-
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-button, summary {
-	cursor: pointer;
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+/* ---------------------CUSTOM PROPERTIES---------------------*/
 :root {
-	/* startje */
+	/* color */
 	--color-main:#111;
-	--color-background:#eee;
+	--color-background:#AECCDD;
+	--color-stroke:#C4C4C4; 
+	
+	/* fontfamily */
+	--h1-fontfamily: flegrei, sans-serif;
+	--h2-fontfamily: Avenir;
 }
 
 
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
+/* ---------------------STIJLINGEN---------------------*/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+	padding: 2.5em;
+  	color:var(--color-main);
+  	background-color:var(--color-background);
 }
 
-/* jouw code */
 
+
+/* ---------------------STIJLING HOOFD-TEKST H1 IN EERSTE SPAN---------------------*/
+header span:nth-of-type(1) h1{
+	display: flex;
+	justify-content: center;
+	font-family: var(--h1-fontfamily);
+	font-size: 15vmin;
+	padding: .5em;
+
+	position: relative;
+}
+
+header span:nth-of-type(1) h1::before{
+	content: "";
+	position: absolute;
+	left: -.3em;
+	right: -.3em;
+	top: 50%;
+	transform: translateY(calc(-25% - 6px)); /* zogt ervoor dat de plaatsing van de stroke in het midden blijft */
+	height: .23em;
+	background-color: var(--color-stroke);
+}
+
+
+/* ---------------------STIJLING MAIN---------------------*/
+main{
+	/* background-color: rgba(255, 0, 0, 0.253); */
+}
+
+
+
+/* ---------------------STIJLING H2 SPAN---------------------*/
+span h2{
+	font-family: var(--h2-fontfamily);
+	font-size: 8vmin;
+}
+
+/* ---------------------STIJLING H2 SPAN---------------------*/
+main span:nth-of-type(1) nav{
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 2em;
+	background-color: var(--color-stroke);
+}
+
+
+span:nth-of-type(2){
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	color: red;
+}
+
+span:nth-of-type(3){
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: purple;
+}
+
+span:nth-of-type(4){
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: blue;
+}
+
+footer nav{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: rosybrown;
+}
