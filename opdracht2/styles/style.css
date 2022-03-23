@@ -1,9 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* ---------------------CSS DOCUMENT OPMAAK---------------------*/
 *, *::after, *::before {
 	box-sizing:border-box;  
 	margin: 0;
   }
-
   
 @font-face {
 	font-family: 'eenfont';
@@ -14,14 +62,12 @@
 
 }
 
-
-
 /* ---------------------CUSTOM PROPERTIES---------------------*/
 :root {
 	/* color */
-	--color-main:#111;
-	--color-background:#AECCDD;
-	--color-stroke:#C4C4C4; 
+	--color-black:#111;
+	--color-blue:#AECCDD;
+	--color-gray:#C4C4C4; 
 	
 	/* fontfamily */
 	--h1-fontfamily: flegrei, sans-serif;
@@ -30,23 +76,23 @@
 
 
 
-/* ---------------------STIJLINGEN---------------------*/
+/* ---------------------BODY STIJLING---------------------*/
 body {
-	padding: 2.5em;
-  	color:var(--color-main);
-  	background-color:var(--color-background);
+	background-color:var(--color-blue);
+	padding: 2.5em 2.5em calc(4em + 2.5em) 2.5em;
 }
 
+/* bron: maijla */
 
 
-/* ---------------------STIJLING HOOFD-TEKST H1 IN EERSTE SPAN---------------------*/
+
+/* ---------------------STIJLING HOOFD-TEKST H1 (IN EERSTE SPAN)---------------------*/
 header span:nth-of-type(1) h1{
 	display: flex;
 	justify-content: center;
 	font-family: var(--h1-fontfamily);
 	font-size: 15vmin;
 	padding: .5em;
-
 	position: relative;
 }
 
@@ -58,53 +104,114 @@ header span:nth-of-type(1) h1::before{
 	top: 50%;
 	transform: translateY(calc(-25% - 6px)); /* zogt ervoor dat de plaatsing van de stroke in het midden blijft */
 	height: .23em;
-	background-color: var(--color-stroke);
+	background-color: var(--color-gray);
 }
 
 
-/* ---------------------STIJLING MAIN---------------------*/
-main{
-	/* background-color: rgba(255, 0, 0, 0.253); */
-}
-
+/* ---------------------FONT+GROTE VAN DE H2's---------------------*/
 
 
 /* ---------------------STIJLING H2 SPAN---------------------*/
-span h2{
-	font-family: var(--h2-fontfamily);
-	font-size: 8vmin;
-}
-
-/* ---------------------STIJLING H2 SPAN---------------------*/
-main span:nth-of-type(1) nav{
+/* main span:nth-of-type(1) nav{
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 	border-radius: 2em;
 	background-color: var(--color-stroke);
+} */
+
+
+/* main span{
+	display: flex;
+	align-items: center;
+} */
+
+
+/* ---------------------SPAN OPMAAK---------------------*/
+main section h2 {
+	font-family: var(--h2-fontfamily);
+	font-weight: bold;
+	font-size: 8vmin;
+	color: palevioletred;
+	
+	margin-left: 1em;
+
+	margin-bottom: .3em;
 }
 
-
-span:nth-of-type(2){
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	color: red;
+main section {
+	margin: 0 -2.5em;
 }
 
-span:nth-of-type(3){
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	color: purple;
+main section + section{
+	margin-top: 4em;
 }
 
+main section > ol {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+
+	overflow-x: scroll;
+
+	list-style: none;
+	padding: 0 2.5em;
+
+	width: 100%;
+}
+	/* grote images van li*/
+	main section > ol li {
+		min-width: 40vmin;
+		width: 40vmin;
+		height: 40vmin;
+	}
+	
+	/* ruimte tussen images */
+	main section > ol li + li {
+		margin-left: .9em;
+	}
+		
+		/* grote images op de pagina*/
+		main section > ol li > img {
+			height: 100%;
+			width: 100%;
+
+			object-fit: cover;
+		}
+
+/* ---------------------3e span---------------------*/
+
+
+
+
+/* ---------------------4e span---------------------*/
 span:nth-of-type(4){
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	color: blue;
 }
 
-footer nav{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	color: rosybrown;
+
+/* ---------------------footer (navigatiebalk)---------------------*/
+
+nav{
+	position: fixed;
+
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	height: 4em;
+	background-color: var(--color-gray);
+	font-family: var(--h1-fontfamily);
+	
+	font-weight: bold;
+	color: var(--color-black);
+}
+
+nav li{
+    list-style: none;
+	display: inline-block;
+	text-align: center;
+    padding: 10px 25px;
+    font-size: 1.4em;
 }
