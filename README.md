@@ -71,7 +71,7 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
 
 
   ### Je ontwerp:
-  <img src="readme-images/schets2" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/schets2.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
