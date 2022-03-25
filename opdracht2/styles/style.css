@@ -30,7 +30,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} /* bron: maijla */
 
 /* ---------------------CSS DOCUMENT OPMAAK---------------------*/
 *, *::after, *::before {
@@ -68,11 +68,11 @@ body {
 	padding: 2.5em 2.5em calc(4em + 2.5em) 2.5em;
 }
 
-/* bron: maijla */
 
 
 
-/* ---------------------STIJLING HOOFD-TEKST H1 (IN EERSTE SPAN)---------------------*/
+
+/* ---------------------HOOFD-TEKST H1 (IN EERSTE SPAN) STIJLING---------------------*/
 header span:nth-of-type(1) h1{
 	display: flex;
 	justify-content: center;
@@ -80,39 +80,40 @@ header span:nth-of-type(1) h1{
 	font-size: 15vmin;
 	padding: .5em;
 	position: relative;
-}
-
-header span:nth-of-type(1) h1::before{
-	content: "";
-	position: absolute;
-	left: -.3em;
-	right: -.3em;
-	top: 50%;
-	transform: translateY(calc(-25% - 6px)); /* zogt ervoor dat de plaatsing van de stroke in het midden blijft */
-	height: .23em;
-	background-color: var(--color-gray);
-}
-
-
-/* ---------------------FONT+GROTE VAN DE H2's---------------------*/
+}   
+	/* grijze streep op hoofd-tekst */
+	header span:nth-of-type(1) h1::before{
+		content: "";
+		position: absolute;
+		left: -.3em;
+		right: -.3em;
+		top: 50%;
+		transform: translateY(calc(-25% - 6px)); /* zorgt ervoor dat de plaatsing van de stroke in het midden blijft */
+		height: .23em;
+		background-color: var(--color-gray);
+	}
 
 
-/* ---------------------STIJLING H2 SPAN---------------------*/
+
+
+
+/* ---------------------H2 HOOFD-TEKST STIJLING 2e SPAN---------------------*/
 /* main span:nth-of-type(1) nav{
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 	border-radius: 2em;
 	background-color: var(--color-stroke);
 } */
+	/* main span{
+		display: flex;
+		align-items: center;
+	} */
 
 
-/* main span{
-	display: flex;
-	align-items: center;
-} */
 
 
-/* ---------------------SPAN OPMAAK---------------------*/
+
+/* ---------------------HELE SPAN OPMAAK---------------------*/
 main section h2 {
 	font-family: var(--h2-fontfamily);
 	font-weight: bold;
@@ -120,18 +121,21 @@ main section h2 {
 	color: var(--color-pink);
 	
 	margin-left: 1em;
-
 	margin-bottom: .3em;
 }
+	/* ruimte tussen elke section */		
+	main section {
+		margin: 0 -2.5em;
+	}
+		main section + section{
+			margin-top: 4em;
+		}
 
-main section {
-	margin: 0 -2.5em;
-}
 
-main section + section{
-	margin-top: 4em;
-}
 
+
+
+/* ---------------------IN DE ol, ALLE OPMAAK---------------------*/
 main section > ol {
 	display: flex;
 	align-items: center;
@@ -144,7 +148,7 @@ main section > ol {
 
 	width: 100%;
 }
-	/* grote images van li*/
+	/* grote van alle images in de li */
 	main section > ol li {
 		min-width: 40vmin;
 		width: 40vmin;
@@ -152,23 +156,23 @@ main section > ol {
 
 		position: relative;
 	}
-	
-	/* ruimte tussen images */
-	main section > ol li + li {
-		margin-left: .9em;
-	}
-		
-		/* grote images op de pagina*/
-		main section > ol li > img {
-			height: 100%;
-			width: 100%;
-
-			object-fit: cover;
+		/* ruimte tussen de images */
+		main section > ol li + li {
+			margin-left: .9em;
 		}
-		
+			/* grote van de images op de pagina */
+			main section > ol li > img {
+				height: 100%;
+				width: 100%;
 
-/* ---------------------playbutton---------------------*/
+				object-fit: cover;
+			}
+	
+			
 
+
+			
+/* ---------------------PLAY-BUTTON OPMAAK---------------------*/
 ol li::before, ol li::after{
 	content: '';
 	position: absolute;
@@ -178,30 +182,32 @@ ol li::before, ol li::after{
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: red;
-
+	/* background: red; */
 }
 
 
 
-/* ---------------------4e span---------------------*/
-span:nth-of-type(4){
+
+
+/* ---------------------4e span?????---------------------*/
+/* span:nth-of-type(4){
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	color: blue;
-}
+} */
 
 
-/* ---------------------footer (navigatiebalk)---------------------*/
+
+
+
+/* ---------------------FOOTER OPMAAK (navigatiebalk)---------------------*/
 nav{
 	position: fixed;
-
 	bottom: 0;
 	left: 0;
 	right: 0;
 
 	padding: 0 2.5em;
-
 	height: 4em;
 	
 	background-color: var(--color-gray);
@@ -210,7 +216,7 @@ nav{
 	font-weight: bold;
 	color: var(--color-black);
 }
-	/* tekst plaatsing */
+	/* plaatsing van de tekst */
 	nav ul {
 		display: flex;
 		flex-direction: row;
@@ -219,26 +225,22 @@ nav{
 
 		height: 100%;
 	}
-
-	nav ul li{
-		font-size: 1.5em;	
-	}
-
-	nav ul li + li {
-		margin-left: 1em;
-	}
-
-
-	nav ul li a {
-		color: var(--color-black);
-		text-decoration: none;
-	}
-
-	/* hover nav-bar */
-	nav ul li a:hover {
-		color: var(--color-pink);
-		transition: .3s;
-	}
+		nav ul li{
+			font-size: 1.5em;	
+		}
+			nav ul li + li {
+				margin-left: 1em;
+			}
+				/* kleur van de tekst */
+				nav ul li a {
+					color: var(--color-black);
+					text-decoration: none;
+				}
+					/* hover functie op de nav */
+					nav ul li a:hover {
+						color: var(--color-pink);
+						transition: .3s;
+					}
 
 
 

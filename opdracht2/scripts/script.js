@@ -1,6 +1,34 @@
 // JavaScript Document
 console.log("howdy");
 
+
+
+var options = {
+    // de tijd van swappen in ms
+    animation: 1000
+  }
+  
+  /* het daadwerkelijk initialiseren van het draggen-en-droppen */
+  // list - de ID van de ul
+  // options - hierboven gedefinieerd
+  var deLijst = document.getElementById('list');
+  var sortable = Sortable.create(deLijst, options);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const URL ="https://openwhyd.org/adrien?format=json";
 
 //haal de lijst 'ul' op uit de html
