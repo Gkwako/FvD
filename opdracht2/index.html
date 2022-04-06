@@ -10,9 +10,9 @@
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
 </head>
-<!-- <audio src="muziek/Faffi - Officer Don't Let Go.mp3"></audio>
-<img src="images/jefferson.jpg" alt=""> -->
+
 <body>
 	<header>
 		<span>
@@ -23,37 +23,54 @@
 	<main>
 		<section>
 			<h2>Favourite</h2>
-		</section>
+				<ol>
+					<li class="empty"></li>
+					<li class="empty"></li>
+					<li class="empty"></li>
+					<li class="empty"></li>
+				</ol>
+	</section>
 
-		<section>
+		<section> 
 			<h2>Nieuwe releases</h2>
-			<ol id="list">
-				<li>
+			<ol id="playList">
+				<li class="fill" draggable="true">
+					<h3 class="name">Alec Benjamin</h3>
+					<p class="song">If I Killed...</p>
 					<img src="images.song/alec.jpg">
-					<audio src="muziek/Alec Benjamin - If I Killed Someone For You .mp3"></audio>	
+					<audio src="muziek/Alec Benjamin - If I Killed Someone For You .mp3"></audio>
+					<a href="" class="play-btn"></a>
 				</li>
-				<li>
+				<li class="fill2" draggable="true">
+					<h3 class="name">Benson Boone</h3>
+					<p class="song">Ghost Town</p>
 					<img src="images.song/benson.jpg">	
-					<audio src="muziek/Benson Boone - Ghost Town.mp3"></audio>	
+					<audio class="audio" src="muziek/Benson Boone - Ghost Town.mp3"></audio>	
 				</li>
-				<li>
-					<img src="images.song/deanLewis.jpg">		
-					<audio src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
+				<li class="fill" draggable="true">
+					<h3 class="name">Dean Lewis</h3>
+					<p class="song">Half A Man</p>
+					<img class="img" src="images.song/deanLewis.jpg">		
+					<audio class="audio" src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
 				</li>
-				<li>
-					<img src="images.song/deanLewis.jpg">		
-					<audio src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
+				<li class="fill" draggable="true">
+					<h3 class="name">Dean Lewis</h3>
+					<p class="song">Half A Man</p>
+					<img class="img" src="images.song/deanLewis.jpg">		
+					<audio class="audio" src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
 				</li>
-				<li>
-					<img src="images.song/deanLewis.jpg">		
-					<audio src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
+				<li class="fill" draggable="true">
+					<h3 class="name">Dean Lewis</h3>
+					<p class="song">Half A Man</p>
+					<img class="img" src="images.song/deanLewis.jpg">		
+					<audio class="audio" src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
 				</li>
 			</ol>
 		</section>
 
 		<section>
 			<h2>Populaire liedjes</h2>
-			<ol>
+			<ol id="playList">
 				<li>
 					<img src="images.song/2Step.png">	
 					<audio src="muziek/Ed Sheeran - 2step .mp3"></audio>	
@@ -73,8 +90,13 @@
 
 	<nav>
 		<ul>
-			<li><a href="">Zoekbalk</a></li>
-			<li><a href="">Sorteren</a></li>
+			<form>
+				<input class="searchbar" type="search" placeholder="wat zoek je?">
+				<span class="clear"></span>
+			</form>
+			
+				<li class="search">Zoekbalk</li>
+				<li class="soort">Sorteren</li>
 		</ul>
 	</nav>
 
