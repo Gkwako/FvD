@@ -115,13 +115,25 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
 
+  Bij de eerste afbeelding zie je dat je een playlist kan slepen.
+    <img src="readme-images/empty1.png" width="375px" alt="ontwerp opdracht 2">
+
+  Bij de tweede afbeelding probeerde ik een nieuwe playlist toe te voegen maar dat lukte niet. In plaats daarvan verschuift de playlist in de favo opzij. 
+  <img src="readme-images/empty2.png" width="375px" alt="ontwerp opdracht 2">
+
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+
+  Ik heb verschillende youtube video's bekeken, ze gebruiken allemaal div's waardoor dit probleem niet voorkomt. 
+
+  Om mijn probleem op te lossen zal ik hiervoor een docent benaderen.
 
 
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+
+  
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
