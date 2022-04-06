@@ -95,6 +95,19 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   <summary>uitwerken na testen (week 6/7)</summary>
 
   Neem minimaal 5 bevindingen op:
+
+  - De playlist naar de empty state slepen gaat wel goed, alleen wanneer je een andere playlist wil slepen gaat het niet. 
+
+  - Het lukt niet om met de zoekbalk om naar playlists te zoeken.
+
+  - Wanneer je naar beneden scrolt zie je de favourite niet meer, misschien beter dit sticky te maken. 
+
+  - Wanneer je een playlist niet meer wil, zie je geen mogelijkheid om die te verwijderen. 
+
+  - Hoe zal de full screen uit zien? hetzlefde als small screen?
+
+
+
   
 
 
