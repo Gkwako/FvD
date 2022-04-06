@@ -73,6 +73,11 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   ### Je ontwerp:
   <img src="readme-images/schets2.png" width="375px" alt="ontwerp opdracht 2">
 
+   ### Tips:
+   Aan de hand van deze tips, ga ik mijn ontwerp aanpassen en goed over nadenken welke elementen ik mee ga nemen.
+  <img src="readme-images/tips.png" width="375px" alt="ontwerp opdracht 2">
+
+
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -90,6 +95,7 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   <summary>uitwerken na testen (week 6/7)</summary>
 
   Neem minimaal 5 bevindingen op:
+  
 
 
 
