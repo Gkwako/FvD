@@ -8,8 +8,13 @@
 
 	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+	<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+	
 
 </head>
 
@@ -23,19 +28,19 @@
 	<main>
 		<section>
 			<h2>Favourite</h2>
-				<ol>
-					<li class="empty"></li>
-					<li class="empty"></li>
-					<li class="empty"></li>
-					<li class="empty"></li>
-				</ol>
+			<ol>
+				<li id="empty1"></li>
+				<li id="empty2"></li>
+				<li id="empty3"></li>
+				<li id="empty4"></li>
+			</ol>
 	</section>
 
 		<section> 
 			<h2>Nieuwe releases</h2>
 
 			<ol id="playList">
-				<li class="fill" draggable="true">
+				<li>
 					<h3 class="name">Alec Benjamin</h3>
 					<p class="song">If I Killed...</p>
 					<img src="images.song/alec.jpg">
@@ -43,21 +48,21 @@
 					<a href="" class="play-btn"></a>
 				</li>
 
-				<li class="fill2" draggable="true">
+				<li>
 					<h3 class="name">Benson Boone</h3>
 					<p class="song">Ghost Town</p>
 					<img src="images.song/benson.jpg">	
 					<audio class="audio" src="muziek/Benson Boone - Ghost Town.mp3"></audio>	
 				</li>
 
-				<li class="fill" draggable="true">
+				<li>
 					<h3 class="name">Dean <br> Lewis</h3> 
 					<p class="song">Half A Man</p>
 					<img class="img" src="images.song/deanLewis.jpg">		
 					<audio class="audio" src="muziek/Dean Lewis - Half A Man.mp3"></audio>	
 				</li>
 
-				<li class="fill" draggable="true">
+				<li>
 					<h3 class="name">Dean <br> Lewis</h3> 
 					<p class="song">Half A Man</p>
 					<img class="img" src="images.song/deanLewis.jpg">		
@@ -69,16 +74,15 @@
 
 		<section>
 			<h2>Populaire liedjes</h2>
-			<ol id="playList">
-
-				<li class="fill" draggable="true">
+			<ol class="play">
+				<!-- <li>
 					<h3 class="name">Dermot Kennedy</h3> 
 					<p class="song">Better days</p>
 					<img src="images.song/dermotKennedy.jpg">	
 					<audio src="muziek/Dermot Kennedy - Better Days.mp3"></audio>
 				</li>
 
-				<li class="fill" draggable="true">
+				<li>
 					<h3 class="name">Dean <br> Lewis</h3> 
 					<p class="song">Half A Man</p>
 					<img class="img" src="images.song/deanLewis.jpg">		
@@ -93,7 +97,7 @@
 				<li>
 					<img src="images.song/jefferson.jpg">	
 					<audio src="muziek/Faffi - Officer Don't Let Go.mp3"></audio>	
-				</li>
+				</li> -->
 			</ol>
 			<!-- https://musicdownload.zone/en25/download?type=mp3&url=2+step+ed+sheeran -->
 		</section>
@@ -112,6 +116,7 @@
 	</nav>
 
 	<script src="scripts/script.js"></script>
+	<script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
 </body>
 
-</html>
+</html>		

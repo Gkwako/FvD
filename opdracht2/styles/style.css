@@ -88,31 +88,23 @@ main section h2 {
 				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
 
-/* tekst in de empty */
-section:nth-of-type(1) .empty::before{
-	content: "Sleep een liedje hier naar toe..";
-	color: var(--color-purple);
-	font-family: var(--h2-fontfamily);
-	font-size: 3vmin;
-	font-weight: bold;
-
-	position: absolute;
-    top: 5em;
-    padding: 1.2em 0 0 2em;
+section:first-of-type li {
+	background-color: var(--color-blackish);
 }
-	section:nth-of-type(1) .empty{
-		background-color: var(--color-blackish);
+	section:first-of-type ol :empty::after{ 
+		content: "Sleep een liedje hier naar toe..";
+		
+		color: var(--color-purple);
+		font-family: var(--h2-fontfamily);
+		font-size: 3vmin;
+		font-weight: bold;
+		
+		display: flex;
+		position: relative;
+		top: 5em;
+		left: 1em;
+		margin: 1em;
 	}
-		section:nth-of-type(1) .invisible{
-			display:none;
-		}
-
-
-section:nth-of-type(1) .fill{
-	background-image: url('../images.song/alec.jpg');
-	background-size: 41vmin;
-	cursor: pointer;
-}
 
 
 
@@ -188,10 +180,10 @@ h3{
 	font-family: var(--h2-fontfamily);
 	color:rgb(216, 75, 75);
 	font-weight: bold;
-	font-size: 5.5vmin;
+	font-size: 5.4vmin;
 
 	position: absolute;
-	top: 3em;
+	top: 2.5em;
 	
 	padding: .4em;
 }
@@ -199,10 +191,10 @@ h3{
 		font-family: var(--h2-fontfamily);
 		color: rgb(211, 99, 99);
 		font-weight: bold;
-		font-size: 3vmin;
+		font-size: 3.1vmin;
 
 		position: absolute;
-		top: 9.5em;
+		top: 10em;
 		padding: .75em;
 	}
 
@@ -227,7 +219,69 @@ h3{
 } */
 
 
+.play {
+	margin:0;
+	padding: 1em;
+	list-style:none;
+	
+	display:flex;
+	gap:1em;
+	  overflow:auto;
+	  
+	  background-color:var(--color-black);
+	  
+	  scroll-snap-type: x mandatory;
+	  overscroll-behavior: contain;
+  }
 
+  .play li {
+	--size-li:min(70vmin, 16em);
+	width:var(--size);
+	flex-shrink:0;
+	padding:1rem;
+	
+	background-color:var(--color-card-background);
+	border-radius:1rem;
+	
+	scroll-snap-align: center;
+}
+
+iframe {
+	--size-vid:calc(var(--size-li) - 2em);
+  display:block;
+	width:var(--size-vid);
+	height: calc(var(--size-vid) / 560 * 315);
+}
+
+
+
+
+
+/**********/
+/* BUTTON */
+/**********/
+button {
+	position:fixed;
+	right:1em;
+	bottom:1em;
+	padding:1em;
+	
+	appearance:none;
+	background-color:var(--color-button-background);
+	border:none;
+	
+	font:inherit;
+	font-weight:700;
+	color:var(--color-button-text);
+	
+	cursor:pointer;
+}
+
+/* altijd belangrijk */
+/* feedback dat op de button geklikt is */
+button:active {
+	background-color:var(--color-button-active);
+}
 
 /* ****************************************************** */
 				/* FOOTER STIJLING */
@@ -251,7 +305,6 @@ nav{
 	/* plaatsing van de tekst */
 	nav ul {
 		display: flex;
-		/* flex-direction: row; */
 		align-items: center;
 		justify-content: center;
 		list-style: none;
@@ -259,10 +312,11 @@ nav{
 	}
 		nav ul li{
 			font-size: 5.5vmin;	
+			margin-right: 2em;
 		}
-			nav ul li + li {
+			/* nav ul li + li {
 				margin-left: 1em;
-			}
+			} */
 				
 	/* hover functie op de nav */
 	nav ul li:hover {
