@@ -68,8 +68,8 @@ const listAbba = document.querySelector('ul.abba');
 
 // artists
 const Nirvana = {
-	"id": "111319",
-	"name": "Nirvana",
+	"id": "152075",
+	"name": "Deanw Lewis",
 	"list": listNirvana
 };
 
