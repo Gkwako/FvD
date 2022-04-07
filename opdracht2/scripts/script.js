@@ -106,11 +106,10 @@ function getVideos(artist) {
 	getData(URL).then(
 		data => {
 
-      console.log(data);
-      
 			// sla de lijst met video-data op
 			let allVideos = data.mvids;
-			
+      
+      console.log(allVideos);
 			// dan elke video uit de lijst een voor een toevoegen
 			allVideos.forEach( video => {
 				
