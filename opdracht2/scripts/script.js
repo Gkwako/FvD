@@ -84,6 +84,7 @@ const ABBA = {
 	"name": "ABBA",
 	"list": listAbba
 };
+
 // per artiest een object met daarin:
 // - de id van de artiest
 // - de naam van de artiest
@@ -104,6 +105,9 @@ function getVideos(artist) {
 	// vraag de videos van de artist op
 	getData(URL).then(
 		data => {
+
+      console.log(data);
+      
 			// sla de lijst met video-data op
 			let allVideos = data.mvids;
 			
