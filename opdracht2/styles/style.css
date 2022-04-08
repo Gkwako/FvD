@@ -18,7 +18,11 @@
 
 	/* fontfamily */
 	--h1-fontfamily: flegrei, sans-serif;
-	--h2-fontfamily: Avenir;
+	--h2-fontfamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--h3-fontfamily: Avenir;
+
+	/* scrollbar */
+	--color-scroll: rgba(216, 112, 147, 0.521);
 }
 
 
@@ -85,31 +89,7 @@ main section h2 {
 
 
 /* ****************************************************** */
-				/* EMPTY FIELD STIJLING */
-/* ****************************************************** */
-
-section:first-of-type li {
-	background-color: var(--color-blackish);
-}
-	section:first-of-type ol :empty::after{ 
-		content: "Sleep een liedje hier naar toe..";
-		
-		color: var(--color-purple);
-		font-family: var(--h2-fontfamily);
-		font-size: 3vmin;
-		font-weight: bold;
-		
-		display: flex;
-		position: relative;
-		top: 5em;
-		left: 1em;
-		margin: 1em;
-	}
-
-
-
-/* ****************************************************** */
-				/* CONTAINER ol PLAATSING */
+			/* CONTAINER ol PLAATSING  EMPTY FIELD */
 /* ****************************************************** */
 
 main section > ol {
@@ -123,168 +103,56 @@ main section > ol {
 	padding: 0 8vmin;
 	width: 100%;
 }
-
-
-
 /* ****************************************************** */
-				/* IMAGE CONTAINER STIJLING */
+				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
 
-/* grote van alle images in de li */
-main section > ol li {
-	min-width: 40vmin;
-	width: 40vmin;
-	height: 40vmin;
-
-	position: relative;
+section:first-of-type li {
+	background-color: var(--color-blackish);
 }
-	/* ruimte tussen de images */
-	main section > ol li + li {
-		margin-left: .9em;
-	}
-		/* grote van de images op de pagina */
-		main section > ol li > img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-		}
-
-
-
-/* ****************************************************** */
-				/* GRAB STIJLING */
-/* ****************************************************** */
-	
-	li{
-		cursor: grab;
-	}	
-	li.sortable-ghost {
-		/* jouw code hier */
-		opacity:.25;
-	  }
-	li.sortable-drag{
-		cursor: grabbing;
-	}	
-
-	/* li p::before{
-		content: "uit: ";
-	} */
-
-
-
-/* ****************************************************** */
-					/* H3 + P STIJLING */
-/* ****************************************************** */
-
-h3{
-	font-family: var(--h2-fontfamily);
-	color:rgb(216, 75, 75);
-	font-weight: bold;
-	font-size: 5.4vmin;
-
-	position: absolute;
-	top: 2.5em;
-	
-	padding: .4em;
-}
-	p{
-		font-family: var(--h2-fontfamily);
-		color: rgb(211, 99, 99);
+	section:first-of-type ol :empty::after{ 
+		content: "Sleep een liedje hier naar toe..";
+		
+		color: var(--color-purple);
+		font-family: var(--h3-fontfamily);
+		font-size: 3vmin;
 		font-weight: bold;
-		font-size: 3.1vmin;
-
-		position: absolute;
-		top: 10em;
-		padding: .75em;
+		
+		display: flex;
+		position: relative;
+		top: 5em;
+		left: 1em;
+		margin: 1em;
 	}
 
 
 
 /* ****************************************************** */
-				/* PLAY-BUTTON STIJLING */
+				/* SCROLLBAR STIJLING */
 /* ****************************************************** */
 
-/* section:nth-of-type(2) li::before, ol li::after{
-	content: '';
-	position: absolute;
-	top: 2;
-	bottom: 0;
-	right: 0;
-	left: 2;
-	height: 25%;
-	width: 25%;
-	background: var(--color-purple);
-	border-radius: 100%;
-	margin: .9em;
-} */
-
-
-.play {
-	margin:0;
-	padding: 1em;
-	list-style:none;
-	
-	display:flex;
-	gap:1em;
-	  overflow:auto;
-	  
-	  background-color:var(--color-black);
-	  
-	  scroll-snap-type: x mandatory;
-	  overscroll-behavior: contain;
-  }
-
-  .play li {
-	--size-li:min(70vmin, 16em);
-	width:var(--size);
-	flex-shrink:0;
-	padding:1rem;
-	
-	background-color:var(--color-card-background);
-	border-radius:1rem;
-	
-	scroll-snap-align: center;
+/* zichtbaarheid van de bar */
+::-webkit-scrollbar{
+	width: 1em;
 }
+	/* de bar */
+	::-webkit-scrollbar-track{
+		background-color: var(--color-scroll);
+		border-radius: 100vw;
+		margin: 8vmin;
+	}
+		/* plaatsing van waar de bar is */
+		::-webkit-scrollbar-thumb{
+			background-color: var(--color-gray);
+			border: .22em solid var(--color-scroll);
+			border-radius: 100vw;
+		}
+/* bron:https://stackoverflow.com/questions/50817727/change-scrollbar-height */
 
-iframe {
-	--size-vid:calc(var(--size-li) - 2em);
-  display:block;
-	width:var(--size-vid);
-	height: calc(var(--size-vid) / 560 * 315);
-}
 
-
-
-
-
-/**********/
-/* BUTTON */
-/**********/
-button {
-	position:fixed;
-	right:1em;
-	bottom:1em;
-	padding:1em;
-	
-	appearance:none;
-	background-color:var(--color-button-background);
-	border:none;
-	
-	font:inherit;
-	font-weight:700;
-	color:var(--color-button-text);
-	
-	cursor:pointer;
-}
-
-/* altijd belangrijk */
-/* feedback dat op de button geklikt is */
-button:active {
-	background-color:var(--color-button-active);
-}
 
 /* ****************************************************** */
-				/* FOOTER STIJLING */
+				/* NAVIGATIE-BALK STIJLING */
 /* ****************************************************** */
 
 nav{
@@ -301,6 +169,8 @@ nav{
 	
 	font-weight: bold;
 	color: var(--color-black);
+
+	z-index: 1;
 }
 	/* plaatsing van de tekst */
 	nav ul {
@@ -345,11 +215,10 @@ nav .searchbar {
 	font-size: 3vmin;
 	display: none;
 }
-
-.searchbar.active{
-	display: unset;
-	width: 56vmin;
-}
+	.searchbar.active{
+		display: unset;
+		width: 56vmin;
+	}
 
 /* kruisje */
 .clear{
@@ -387,6 +256,184 @@ nav .searchbar {
 	.clear.active{
 		display: unset;
 	}
+
+
+
+/* ****************************************************** */
+				/* VIDEO CONTAINER STIJLING */
+/* ****************************************************** */
+
+section:nth-of-type(3) ul.musicList{
+	display: flex;
+    overflow-x: scroll;
+	padding: 0 8vmin;
+	
+	height: 17em;
+
+	gap: 3em;
+	position: relative;
+	right: 3em;
+}
+	section:nth-of-type(3) li{
+		display: flex;
+		list-style: none;
+	}
+
+	iframe {
+	  	display:block;
+		width:50vmin;
+		height: calc(var(--size-vid) / 560 * 315);
+		
+	}
+
+/* section:nth-of-type(3) li :nth-of-type(2){
+ */
+
+	/* gap: 2;
+	
+	padding:1em;
+	
+	background-color:green;
+	border-radius:1rem;
+	list-style: none;
+	scroll-snap-align: center;
+} */
+
+
+/* grote van alle images in de li */
+main section > ol li {
+	min-width: 40vmin;
+	width: 40vmin;
+	height: 40vmin;
+
+	position: relative;
+}
+	/* ruimte tussen de images */
+	main section > ol li + li {
+		margin-left: .9em;
+	}
+		/* grote van de images op de pagina */
+		main section > ol li > img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+
+
+
+/* ****************************************************** */
+				/* GRAB STIJLING */
+/* ****************************************************** */
+	
+	li{
+		cursor: grab;
+	}	
+	li.sortable-ghost {
+		/* jouw code hier */
+		opacity:.25;
+	  }
+	li.sortable-drag{
+		cursor: grabbing;
+	}	
+
+	/* li p::before{
+		content: "uit: ";
+	} */
+
+
+
+/* ****************************************************** */
+					/* H3 + P STIJLING */
+/* ****************************************************** */
+
+h3{
+	font-family: var(--h2-fontfamily);
+	color:rgb(216, 75, 75);
+	font-weight: bold;
+	font-size: 5.4vmin;
+
+	position: absolute;
+	top: 1em;
+	margin-left: 2.3em;
+	padding: .4em;
+}
+	p{
+		font-family: var(--h2-fontfamily);
+		color: rgb(211, 99, 99);
+		font-weight: bold;
+		font-size: 3.1vmin;
+
+		position: absolute;
+		top: 1em;
+		margin-left: 4em;
+		padding: .75em;
+	}
+
+
+
+/* ****************************************************** */
+				/* PLAY-BUTTON STIJLING */
+/* ****************************************************** */
+
+/* .play {
+	margin:0;
+	padding: 1em;
+	list-style:none;
+	
+	display:flex;
+	gap:1em;
+	  overflow:auto;
+	  
+	  background-color:var(--color-black);
+	  
+	  scroll-snap-type: x mandatory;
+	  overscroll-behavior: contain;
+  } */
+
+ 
+
+
+
+
+
+
+
+/**********/
+/* BUTTON */
+/**********/
+button {
+	position:fixed;
+	right:1em;
+	bottom:1em;
+	padding:1em;
+	
+	appearance:none;
+	background-color:var(--color-button-background);
+	border:none;
+	
+	font:inherit;
+	font-weight:700;
+	color:var(--color-button-text);
+	
+	cursor:pointer;
+}
+
+/* altijd belangrijk */
+/* feedback dat op de button geklikt is */
+button:active {
+	background-color:var(--color-button-active);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 	

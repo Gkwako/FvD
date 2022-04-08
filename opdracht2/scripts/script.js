@@ -1,5 +1,5 @@
 // JavaScript Document
-console.log("Search songs");
+console.log("open searchbar");
 
 var zoekbalk = document.querySelector(".search");
 var zoeken = document.querySelector(".searchbar");
@@ -14,6 +14,36 @@ kruisje.onclick = function(){
   kruisje.classList.toggle('active')
   zoeken.classList.toggle('active')
 }
+
+
+// -------------------------------------------
+console.log("soort by name and song");
+
+var sorteren = document.querySelector(".soort");
+var zoeken = document.querySelector(".searchbar");
+var kruisje = document.querySelector(".clear");
+
+zoekbalk.onclick = function(){
+  zoeken.classList.toggle('active')
+  kruisje.classList.toggle('active')
+}
+
+kruisje.onclick = function(){
+  kruisje.classList.toggle('active')
+  zoeken.classList.toggle('active')
+}
+
+
+
+// -------------------------------------------
+console.log("Search songs");
+
+var options = {
+  valueNames: [ 'name', 'song' ]
+};
+
+var zoekLijst = new List('playList', options);
+
 
 
 // -------------------------------------------
@@ -62,15 +92,15 @@ console.log("music Time");
 const urlBase = "https://theaudiodb.com/api/v1/json/2/mvid.php?i=";
 
 //lists
-const listNirvana = document.querySelector('ul.nirvana');
+const listWalker = document.querySelector('ul.nirvana');
 const listSnoopDog = document.querySelector('ul.snoop-dog');
 const listAbba = document.querySelector('ul.abba');
 
 // artists
-const Nirvana = {
-	"id": "152075",
-	"name": "Deanw Lewis",
-	"list": listNirvana
+const TomWalker = {
+	"id": "152173",
+	"name": "Tom Walker",
+	"list": listWalker
 };
 
 const SnoopDog = {
@@ -127,8 +157,6 @@ function getVideos(artist) {
 				// - de HTML voor de embedded youtube video
 				let videoHtml = `
 					<li>
-						<h3>${video.strTrack}</h3>
-						<p>${artist.name}</p>
 						${iframeHTML}
 					</li>
 				`;
@@ -165,7 +193,7 @@ async function getData(URL) {
 
 // vul de nirvana list
 // het object van de artiest wordt meegegeven
-getVideos(Nirvana);
+getVideos(TomWalker);
 
 // vul de Snoop Dog list
 getVideos(SnoopDog);
