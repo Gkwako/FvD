@@ -104,8 +104,8 @@ function getVideos(artist) {
 				// - de HTML voor de embedded youtube video
 				let videoHtml = `
           <li>
-            <h3 class="name">${video.strTrack}</h3>
-						<p class="song>${artist.name}
+            <h3>${video.strTrack}</h3>
+						<p>${artist.name}
 						${iframeHTML}
 					</li>
 				`;
