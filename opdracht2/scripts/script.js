@@ -57,7 +57,7 @@ kruisje.onclick = function(){
 
 
 
-// --------------------------- Sort by name
+// ---------------------------Search song
 console.log("alfabetische volgorde songs");
 
 var options = {
@@ -65,6 +65,10 @@ var options = {
 };
 
 var zoekLijst = new List('playList', options);
+
+
+zoekLijst.sort('name', { order: "asc" });
+
 
 
 
