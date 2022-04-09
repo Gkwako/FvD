@@ -3,6 +3,8 @@
 	margin: 0;
   }
 
+
+
 /* ****************************************************** */
 					/* CUSTOM PROPERTIES */
 /* ****************************************************** */
@@ -50,6 +52,7 @@ header span:nth-of-type(1) h1{
 	font-size: 15vmin;
 	padding: .5em;
 	position: relative;
+	color:var(--color-black);
 }   
 	/* grijze streep op logo */
 	header span:nth-of-type(1) h1::before{
@@ -89,41 +92,70 @@ main section h2 {
 
 
 /* ****************************************************** */
-			/* CONTAINER ol PLAATSING  EMPTY FIELD */
-/* ****************************************************** */
-
-main section > ol {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-
-	overflow-x: scroll;
-
-	list-style: none;
-	padding: 0 8vmin;
-	width: 100%;
-}
-/* ****************************************************** */
 				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
-
-section:first-of-type li {
-	background-color: var(--color-blackish);
+/* container van de empty */
+section:nth-of-type(1){
+	background-color: var(--color-gray);
 }
-	section:first-of-type ol :empty::after{ 
-		content: "Sleep een liedje hier naar toe..";
+	section:first-of-type ol{
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr 1fr;
+		background-color: var(--color-blackish);
 		
-		color: var(--color-purple);
-		font-family: var(--h3-fontfamily);
-		font-size: 3vmin;
-		font-weight: bold;
+		margin: 8vmin;
+		margin-top: 1em;
+		padding:0;
 		
-		display: flex;
-		position: relative;
-		top: 5em;
-		left: 1em;
-		margin: 1em;
+		gap: 2em;
+		list-style:none; 
+
+		overflow-x: scroll;
 	}
+		/* de empties */
+		section:first-of-type li{
+			background-color: var(--color-purple);
+			width:11em;
+			aspect-ratio:1/1;
+			width: 40vmin; 
+		}
+		
+	
+		/* tekst in de empty */
+		section:first-of-type ol :empty::after{ 
+			content: "Sleep een liedje hier naar toe..";
+			font-family: var(--h3-fontfamily);
+			color: rgba(255, 255, 255, 0.562);
+
+			font-weight: bold;
+			font-size: 3vmin;
+		
+			display: flex;
+			margin-right: 3em;
+		
+		    position: relative;
+			top: 5em;
+			left: 2em;
+		}
+
+
+			/* 1 song per keer zien op mobiel */
+			@media (max-width: 350px){
+
+				section:first-of-type li{
+					width: 85vmin; 
+				}
+
+				section:first-of-type ol :empty::after{
+					content: "Plaats je favo liedjes...";
+
+					font-size: 7vmin;
+
+					position: relative;
+					top:5.1em;
+					left: 1.5em;
+				}
+			}
 
 
 
@@ -139,8 +171,7 @@ section:first-of-type li {
 	::-webkit-scrollbar-track{
 		background-color: var(--color-scroll);
 		border-radius: 100vw;
-		margin: 8vmin;
-	}
+	} 
 		/* plaatsing van waar de bar is */
 		::-webkit-scrollbar-thumb{
 			background-color: var(--color-gray);
@@ -157,18 +188,15 @@ section:first-of-type li {
 
 nav{
 	position: fixed;
-	bottom: 0;
 	left: 0;
 	right: 0;
-
+	bottom: 0;
+	
 	padding: 0 2.5em;
 	height: 15vmin;
 	
-	background-color: var(--color-gray);
+	background-color: #c4c4c4bb;
 	font-family: var(--h1-fontfamily);
-	
-	font-weight: bold;
-	color: var(--color-black);
 
 	z-index: 1;
 }
@@ -179,14 +207,19 @@ nav{
 		justify-content: center;
 		list-style: none;
 		height: 100%;
+		color: var(--color-black); 
 	}
 		nav ul li{
-			font-size: 5.5vmin;	
-			margin-right: 2em;
+			font-size: 5.1vmin;	
+			margin-right: 1em;
 		}
-			/* nav ul li + li {
-				margin-left: 1em;
-			} */
+
+		/* 1 song per keer zien op mobiel */
+		@media (max-width: 350px){
+			nav ul{
+				flex-wrap: wrap;
+			}
+		}
 				
 	/* hover functie op de nav */
 	nav ul li:hover {
@@ -201,239 +234,93 @@ nav{
 				/* ZOEKBALK STIJLING */
 /* ****************************************************** */
 
-nav .searchbar {
-	position: absolute;
-	top: 1.2em;
-	height: 7vmin;
-	border-radius: .5em;
-	
-	border: none;
-	outline: none;
-	font: inherit;
-	
-	padding: .9em;
-	font-size: 3vmin;
-	display: none;
-}
-	.searchbar.active{
-		display: unset;
-		width: 56vmin;
-	}
-
-/* kruisje */
-.clear{
-	position: absolute;
-	top: 35%;
-	transform: translate(-50%);
-	width: 1em;
-	height: 1em;
-	right: 6.8em;
-	/* background: #111; */
-	cursor: pointer;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	display: none;
-}
-	.clear::before{
+	nav .searchbar {
 		position: absolute;
-		content: '';
-		width: .3em;
-		height: 15px;
-		background: var(--color-black);
-		transform: rotate(45deg);
-	}
-	.clear::after{
-		position: absolute;
-		content: '';
-		width: .3em;
-		height: 15px;
-		background: var(--color-black);
-		transform: rotate(315deg);
-	}
-
-	.clear.active{
-		display: unset;
-	}
-
-
-
-/* ****************************************************** */
-				/* VIDEO CONTAINER STIJLING */
-/* ****************************************************** */
-
-section:nth-of-type(3) ul.musicList{
-	display: flex;
-    overflow-x: scroll;
-	padding: 0 8vmin;
-	
-	height: 17em;
-
-	gap: 3em;
-	position: relative;
-	right: 3em;
-}
-	section:nth-of-type(3) li{
-		display: flex;
-		list-style: none;
-	}
-
-	iframe {
-	  	display:block;
-		width:50vmin;
-		height: calc(var(--size-vid) / 560 * 315);
+		border-radius: .2em;
 		
+		border: none;
+		outline-color: var(--color-pink);
+		
+		
+		padding: .9em;
+		font-size: 3vmin;
+		display: none;
 	}
-
-/* section:nth-of-type(3) li :nth-of-type(2){
- */
-
-	/* gap: 2;
-	
-	padding:1em;
-	
-	background-color:green;
-	border-radius:1rem;
-	list-style: none;
-	scroll-snap-align: center;
-} */
-
-
-/* grote van alle images in de li */
-main section > ol li {
-	min-width: 40vmin;
-	width: 40vmin;
-	height: 40vmin;
-
-	position: relative;
-}
-	/* ruimte tussen de images */
-	main section > ol li + li {
-		margin-left: .9em;
-	}
-		/* grote van de images op de pagina */
-		main section > ol li > img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
+		.searchbar.active{
+			display: unset;
+			width: 56vmin;
+		
 		}
-
-
-
-
-/* ****************************************************** */
-				/* GRAB STIJLING */
-/* ****************************************************** */
 	
-	li{
-		cursor: grab;
-	}	
-	li.sortable-ghost {
-		/* jouw code hier */
-		opacity:.25;
-	  }
-	li.sortable-drag{
-		cursor: grabbing;
-	}	
+	/* kruisje bij zoeken */
+	.clear{
+		position: relative;
+		left: 23vmin;
+		bottom: 1.5vmin;
+		font-size: 3vmin;
+		transform: translate(-50%);
 
-	/* li p::before{
-		content: "uit: ";
-	} */
+		cursor: pointer;
+		
+		display: flex;
+		
+		align-items: center;
+		display: none;
 
-
-
-/* ****************************************************** */
-					/* H3 + P STIJLING */
-/* ****************************************************** */
-
-h3{
-	font-family: var(--h2-fontfamily);
-	color:rgb(216, 75, 75);
-	font-weight: bold;
-	font-size: 5.4vmin;
-
-	position: absolute;
-	top: 1em;
-	margin-left: 2.3em;
-	padding: .4em;
-}
-	p{
-		font-family: var(--h2-fontfamily);
-		color: rgb(211, 99, 99);
-		font-weight: bold;
-		font-size: 3.1vmin;
-
-		position: absolute;
-		top: 1em;
-		margin-left: 4em;
-		padding: .75em;
 	}
+		@media (max-width: 350px){
+			.clear{
+				left: 6vmin;
+				top: 2.5vmin;
+			}
+		}
+			.clear::before{
+				position: absolute;
+				content: '';
+				width: .3em;
+				height: 1em;
+				background: var(--color-black);
+				transform: rotate(45deg);
+			}
+			.clear::after{
+				position: absolute;
+				content: '';
+				width: .3em;
+				height: 1em;
+				background: var(--color-black);
+				transform: rotate(315deg);
+			}
+				.clear.active{
+					display: unset;
+				}
+
 
 
 
 /* ****************************************************** */
-				/* PLAY-BUTTON STIJLING */
+				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
-
-/* .play {
-	margin:0;
-	padding: 1em;
-	list-style:none;
-	
-	display:flex;
-	gap:1em;
-	  overflow:auto;
-	  
-	  background-color:var(--color-black);
-	  
-	  scroll-snap-type: x mandatory;
-	  overscroll-behavior: contain;
-  } */
-
- 
-
-
-
-
-
-
-
-/**********/
-/* BUTTON */
-/**********/
-button {
-	position:fixed;
-	right:1em;
-	bottom:1em;
-	padding:1em;
-	
-	appearance:none;
-	background-color:var(--color-button-background);
-	border:none;
-	
-	font:inherit;
-	font-weight:700;
-	color:var(--color-button-text);
-	
-	cursor:pointer;
+/* container van section 2 */
+section:nth-of-type(2){
+	background-color: var(--color-gray);
 }
+	section:nth-of-type(2) ol{
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr 1fr;
+		background-color: var(--color-blackish);
+		
+		margin: 8vmin;
+		margin-top: 1em;
+		padding:0;
+		
+		gap: 2em;
+		list-style:none; 
 
-/* altijd belangrijk */
-/* feedback dat op de button geklikt is */
-button:active {
-	background-color:var(--color-button-active);
-}
+		overflow-x: scroll;
+	}
+		
 
 
 
 
 
-
-
-
-
-
-
-
-	

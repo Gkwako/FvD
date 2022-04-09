@@ -1,29 +1,13 @@
 // JavaScript Document
-console.log("open searchbar");
 
+// --------------------------- Searchbar
 var zoekbalk = document.querySelector(".search");
 var zoeken = document.querySelector(".searchbar");
+
 var kruisje = document.querySelector(".clear");
 
 zoekbalk.onclick = function(){
-  zoeken.classList.toggle('active')
-  kruisje.classList.toggle('active')
-}
-
-kruisje.onclick = function(){
-  kruisje.classList.toggle('active')
-  zoeken.classList.toggle('active')
-}
-
-
-// -------------------------------------------
-console.log("soort by name and song");
-
-var sorteren = document.querySelector(".soort");
-var zoeken = document.querySelector(".searchbar");
-var kruisje = document.querySelector(".clear");
-
-zoekbalk.onclick = function(){
+  console.log("open searchbar");
   zoeken.classList.toggle('active')
   kruisje.classList.toggle('active')
 }
@@ -35,8 +19,8 @@ kruisje.onclick = function(){
 
 
 
-// -------------------------------------------
-console.log("Search songs");
+// --------------------------- Sort by name
+console.log("alfabetische volgorde songs");
 
 var options = {
   valueNames: [ 'name', 'song' ]
@@ -46,53 +30,16 @@ var zoekLijst = new List('playList', options);
 
 
 
-// -------------------------------------------
-console.log("empty Time");
-
-const plek1 = document.querySelector("#empty1");
-const plek2 = document.querySelector("#empty2");
-const plek3 = document.querySelector("#empty3");
-const plek4 = document.querySelector("#empty4");
-
-const lijst = document.querySelector("#playList");
-
-new Sortable(empty1, {
-    group: 'empties',
-    animation: 100
-});
-
-new Sortable(empty2, {
-    group: 'empties',
-    animation: 100
-});
-
-new Sortable(empty3, {
-    group: 'empties',
-    animation: 100
-});
-
-new Sortable(empty4, {
-    group: 'empties',
-    animation: 100
-});
-
-new Sortable(playList, {
-    group: 'empties',
-    animation: 100,
-		sort: false
-});
-
-
-// -------------------------------------------
+// --------------------------- Youtube Songs
 console.log("music Time");
 
-// api 
-// https://www.theaudiodb.com
-// https://www.theaudiodb.com/api_guide.php
+// // api 
+// // https://www.theaudiodb.com
+// // https://www.theaudiodb.com/api_guide.php
 const urlBase = "https://theaudiodb.com/api/v1/json/2/mvid.php?i=";
 
 //lists
-const listWalker = document.querySelector('ul.nirvana');
+const listWalker = document.querySelector('ul.t-Walker');
 const listSnoopDog = document.querySelector('ul.snoop-dog');
 const listAbba = document.querySelector('ul.abba');
 
