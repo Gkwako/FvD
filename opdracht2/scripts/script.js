@@ -1,5 +1,43 @@
 // JavaScript Document
 
+// --------------------------- grab songs
+console.log("empty Time");
+
+const plek1 = document.querySelector("#empty1");
+const plek2 = document.querySelector("#empty2");
+const plek3 = document.querySelector("#empty3");
+const plek4 = document.querySelector("#empty4");
+
+const lijst = document.querySelector("#playList");
+
+new Sortable(empty1, {
+    group: 'empties',
+    animation: 100
+});
+
+new Sortable(empty2, {
+    group: 'empties',
+    animation: 100
+});
+
+new Sortable(empty3, {
+    group: 'empties',
+    animation: 100
+});
+
+new Sortable(empty4, {
+    group: 'empties',
+    animation: 100
+});
+
+new Sortable(playList, {
+    group: 'empties',
+    animation: 100,
+		sort: true
+});
+
+
+
 // --------------------------- Searchbar
 var zoekbalk = document.querySelector(".search");
 var zoeken = document.querySelector(".searchbar");
@@ -39,9 +77,9 @@ console.log("music Time");
 const urlBase = "https://theaudiodb.com/api/v1/json/2/mvid.php?i=";
 
 //lists
-const listWalker = document.querySelector('ul.t-Walker');
-const listSnoopDog = document.querySelector('ul.snoop-dog');
-const listAbba = document.querySelector('ul.abba');
+const listWalker = document.querySelector('ol.t-Walker');
+const listDragons = document.querySelector('ol.i-Dragons');
+const listSmith = document.querySelector('ol.s-smith');
 
 // artists
 const TomWalker = {
@@ -50,16 +88,16 @@ const TomWalker = {
 	"list": listWalker
 };
 
-const SnoopDog = {
-	"id": "112059",
-	"name": "Snoop Dog",
-	"list": listSnoopDog
+const ImagineDragons = {
+	"id": "114415",
+	"name": "Imagine Dragons",
+	"list": listDragons
 };
 
-const ABBA = {
-	"id": "111258",
-	"name": "ABBA",
-	"list": listAbba
+const SamSmith = {
+	"id": "126975",
+	"name": "Sam Smith",
+	"list": listSmith
 };
 
 // per artiest een object met daarin:
@@ -144,11 +182,9 @@ async function getData(URL) {
 // het object van de artiest wordt meegegeven
 getVideos(TomWalker);
 
-// vul de Snoop Dog list
-getVideos(SnoopDog);
+getVideos(ImagineDragons);
 
-// vul de ABBA list
-getVideos(ABBA);
+getVideos(SamSmith);
 
 
 

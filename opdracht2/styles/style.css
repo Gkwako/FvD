@@ -298,29 +298,79 @@ nav{
 
 
 /* ****************************************************** */
-				/* EMPTY FIELD STIJLING */
+				/* VIDEO CONTAINER STIJLING  */
 /* ****************************************************** */
 /* container van section 2 */
 section:nth-of-type(2){
 	background-color: var(--color-gray);
 }
 	section:nth-of-type(2) ol{
-		display:grid;
-		grid-template-columns:1fr 1fr 1fr 1fr;
-		background-color: var(--color-blackish);
-		
+		display:flex;
 		margin: 8vmin;
 		margin-top: 1em;
-		padding:0;
+		padding: 0;
 		
-		gap: 2em;
 		list-style:none; 
-
 		overflow-x: scroll;
-	}
 		
+		background-color: var(--color-blackish);
+	}
+		iframe {
+			width:40vmin;
+			height: calc(var(--size-vid) / 560 * 315);
+			aspect-ratio: 1/1;
+			margin-top: .5em;
+			margin-right: 2em;		
+		} 
 
 
+		
+/* ****************************************************** */
+					/* H3 + P STIJLING */
+/* ****************************************************** */
 
+h3{
+	font-family: var(--h2-fontfamily);
+	color:rgb(43, 17, 17);
+	font-weight: bold;
+	font-size: 4vmin;
+	
+}
+	p{
+		font-family: var(--h2-fontfamily);
+		color: rgb(158, 90, 90);
+		font-weight: bold;
+		font-size: 3.1vmin;
+	}
+
+	/* mobiel */
+	@media (max-width: 350px){
+		h3{
+			font-size: 7vmin;
+		}
+			iframe {
+				width:84vmin;
+			} 
+	}
+
+
+/* ****************************************************** */
+				/* GRAB STIJLING */
+/* ****************************************************** */
+	
+li{
+	cursor: grab;
+}	
+li.sortable-ghost {
+	/* jouw code hier */
+	opacity:.25;
+  }
+li.sortable-drag{
+	cursor: grabbing;
+}	
+
+/* li p::before{
+	content: "uit: ";
+} */
 
 
