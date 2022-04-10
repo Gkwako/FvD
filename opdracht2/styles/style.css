@@ -3,6 +3,13 @@
 	margin: 0;
   }
 
+  @font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 
 /* ****************************************************** */
@@ -68,9 +75,52 @@ header span:nth-of-type(1) h1{
 
 
 
+	
+/* ****************************************************** */
+					/* Button STIJLING */
+/* ****************************************************** */
+
+header button{
+	position: absolute;
+	top: 33vmin;
+	right: 2em;
+	font-size: 4.5vmin;
+	
+	border: none;
+	outline-color: white;
+		
+	border-radius: 1em;
+	padding: .5em;
+
+	background-color: var(--color-scroll);
+}
+
+	header button:hover{
+		background-color: rgba(27, 11, 83, 0.719);
+	}
+		.darkmode{
+			background-color:rgba(27, 11, 83, 0.719);
+		}
+
+		.darkmode button::after{
+			content: '🌔';	
+			position: absolute;
+			left: .5em;
+		}
+		
+		
+
+		
+
+
+
 /* ****************************************************** */
 					/* H2 STIJLING */
 /* ****************************************************** */
+h2:focus-within{
+	outline-color: white;
+
+}
 
 main section h2 {
 	font-family: var(--h2-fontfamily);
@@ -80,6 +130,8 @@ main section h2 {
 	
 	margin-left: 1em;
 	margin-bottom: .3em;
+
+   	text-decoration-line: overline underline; 
 }
 	/* ruimte tussen elke section */		
 	main section {
@@ -91,13 +143,15 @@ main section h2 {
 
 
 
+
 /* ****************************************************** */
 				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
 /* container van de empty */
 section:nth-of-type(1){
-	background-color: var(--color-gray);
+	/* background-color: var(--color-gray); */
 }
+
 	section:first-of-type ol{
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr 1fr;
@@ -302,7 +356,7 @@ nav{
 /* ****************************************************** */
 /* container van section 2 */
 section:nth-of-type(2){
-	background-color: var(--color-gray);
+	/* background-color: var(--color-gray); */
 }
 	section:nth-of-type(2) ol{
 		display:flex;
