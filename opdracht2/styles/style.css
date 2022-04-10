@@ -4,10 +4,10 @@
   }
 
   @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-		url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
+	font-family: 'Titan One', cursive;
+	src: url('../fonts/Fascinate_Inline/FascinateInline-Regular.ttf') format('woff2');
+	
+	font-weight: bold;
 	font-style: normal;
 }
 
