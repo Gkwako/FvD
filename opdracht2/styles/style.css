@@ -5,7 +5,7 @@
 
   @font-face {
 	font-family: 'Titan One', cursive;
-	src: url('../fonts/Fascinate_Inline/FascinateInline-Regular.ttf') format('woff2');
+	src: url('../fonts/Fascinate_Inline/FascinateInline-Regular.ttf') format('Titan');
 	
 	font-weight: bold;
 	font-style: normal;
@@ -194,7 +194,7 @@ section:nth-of-type(1){
 
 
 			/* 1 song per keer zien op mobiel */
-			@media (max-width: 350px){
+			@media (max-width: 410px){
 
 				section:first-of-type li{
 					width: 85vmin; 
@@ -269,7 +269,7 @@ nav{
 		}
 
 		/* 1 song per keer zien op mobiel */
-		@media (max-width: 350px){
+		@media (max-width: 410px){
 			nav ul{
 				flex-wrap: wrap;
 			}
@@ -322,7 +322,7 @@ nav{
 		display: none;
 
 	}
-		@media (max-width: 350px){
+		@media (max-width: 4100px){
 			.clear{
 				left: 6vmin;
 				top: 2.5vmin;
@@ -398,7 +398,7 @@ h3{
 	}
 
 	/* mobiel */
-	@media (max-width: 350px){
+	@media (max-width: 410px){
 		h3{
 			font-size: 7vmin;
 		}
