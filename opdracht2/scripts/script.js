@@ -1,10 +1,10 @@
 // JavaScript Document
 
 // --------------------------- dark mode
-function darkmode() {
-    var body = document.body;
-	body.classList.toggle("darkmode");
-}
+// function darkmode() {
+//     var body = document.body;
+// 	body.classList.toggle("darkmode");
+// }
 
 // --------------------------- grab songs
 console.log("empty Time");

@@ -19,6 +19,8 @@
 /* ****************************************************** */
 
 :root {
+	--color-scheme: light dark; /* both supported */ 
+
 	/* color */
 	--color-black:#111;
 	--color-blackish:rgba(0, 0, 0, 0.048); 
@@ -34,10 +36,11 @@
 
 	/* scrollbar */
 	--color-scroll: rgba(34, 35, 36, 0.877);
+
 }
 
 
-
+ 
 
 /* ****************************************************** */
 					/* BODY STIJLING */
@@ -49,11 +52,20 @@ body {
 	line-height: 1;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: rgba(27, 11, 83, 0.719);
+		background: var(--color-purple);
 	}
 
+	
+}
+
+
+
+		
+	
 
 /* ****************************************************** */
 					/* LOGO STIJLING */
@@ -453,4 +465,3 @@ li p::before{
 	content: " ";
 }
 
-}
