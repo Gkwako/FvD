@@ -12,6 +12,8 @@
 }
 
 
+
+
 /* ****************************************************** */
 					/* CUSTOM PROPERTIES */
 /* ****************************************************** */
@@ -31,8 +33,9 @@
 	--h3-fontfamily: Avenir;
 
 	/* scrollbar */
-	--color-scroll: rgba(216, 112, 147, 0.521);
+	--color-scroll: rgba(34, 35, 36, 0.877);
 }
+
 
 
 
@@ -46,6 +49,10 @@ body {
 	line-height: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: rgba(27, 11, 83, 0.719);
+	}
 
 
 /* ****************************************************** */
@@ -77,10 +84,10 @@ header span:nth-of-type(1) h1{
 
 	
 /* ****************************************************** */
-					/* Button STIJLING */
+					/* DARK-MODE STIJLING */
 /* ****************************************************** */
 
-header button{
+/* header button{
 	position: absolute;
 	top: 33vmin;
 	right: 2em;
@@ -94,51 +101,46 @@ header button{
 
 	background-color: var(--color-scroll);
 }
-
 	header button:hover{
 		background-color: rgba(27, 11, 83, 0.719);
 	}
 		.darkmode{
 			background-color:rgba(27, 11, 83, 0.719);
 		}
+			.darkmode button::after{
+				content: '🌔';	
+				position: absolute;
+				left: .5em;
+			} */
 
-		.darkmode button::after{
-			content: '🌔';	
-			position: absolute;
-			left: .5em;
-		}
+
+
+			
 		
-		
-
-		
-
-
-
+			
 /* ****************************************************** */
 					/* H2 STIJLING */
 /* ****************************************************** */
-h2:focus-within{
-	outline-color: white;
-
-}
 
 main section h2 {
+	padding: .2em;
+	background-color: var(--color-black);
+
 	font-family: var(--h2-fontfamily);
+	color: var(--color-pink);
 	font-weight: bold;
 	font-size: 8vmin;
-	color: var(--color-pink);
 	
-	margin-left: 1em;
+	margin: 1em;
 	margin-bottom: .3em;
-
-   	text-decoration-line: overline underline; 
 }
-	/* ruimte tussen elke section */		
+	/* breedte van de sections */		
 	main section {
 		margin: 0 -2.5em;
 	}
+	/* ruimte tussen de bovenste section 'fav' */
 		main section + section{ /* + geeft aan "inclusief" dat */
-			margin-top: 4em;
+			margin-top: 3.4em;
 		}
 
 
@@ -147,69 +149,68 @@ main section h2 {
 /* ****************************************************** */
 				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
-/* container van de empty */
-section:nth-of-type(1){
-	/* background-color: var(--color-gray); */
-}
 
+/* container van de empty */
 	section:first-of-type ol{
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr 1fr;
-		background-color: var(--color-blackish);
+		gap: 2em;
+		
+		background-color: var(--color-black);
+		padding:1em;
+		list-style:none; 
 		
 		margin: 8vmin;
 		margin-top: 1em;
-		padding:0;
 		
-		gap: 2em;
-		list-style:none; 
-
 		overflow-x: scroll;
 	}
 		/* de empties */
 		section:first-of-type li{
-			background-color: var(--color-purple);
-			width:11em;
+			background-color: #d3c8e7b6;
+			/* width:11em; */
 			aspect-ratio:1/1;
 			width: 40vmin; 
 		}
-		
-	
-		/* tekst in de empty */
-		section:first-of-type ol :empty::after{ 
-			content: "Sleep een liedje hier naar toe..";
-			font-family: var(--h3-fontfamily);
-			color: rgba(255, 255, 255, 0.562);
+			/* tekst in de empty */
+			section:first-of-type ol :empty::after{ 
+				content: "Sleep een liedje hier naar toe..";
+				font-family: var(--h3-fontfamily);
+				color: rgba(255, 255, 255, 0.562);
 
-			font-weight: bold;
-			font-size: 3vmin;
-		
-			display: flex;
-			margin-right: 3em;
-		
-		    position: relative;
-			top: 5em;
-			left: 2em;
-		}
+				font-weight: bold;
+				font-size: 3vmin;
 
+				position: relative;
+				top: 5.5em;
+				left: 2em;
+			
+				display: flex;
+				margin-right: 3em;
+			}
 
-			/* 1 song per keer zien op mobiel */
+			/* emptie field stijling, 1 song per keer zien op mobiel */
 			@media (max-width: 375px){
-
 				section:first-of-type li{
-					width: 85vmin; 
+					width: 75vmin; 
 				}
-
-				section:first-of-type ol :empty::after{
-					content: "Plaats je favo liedjes...";
-
-					font-size: 7vmin;
-
-					position: relative;
-					top:5.1em;
-					left: 1.5em;
+					section:first-of-type ol :empty::after{
+						content: "Plaats je favo liedjes...";
+						font-size: 7vmin;
+						top:4.3em;
+					}
+				
+				/* nav-bar komt onder elkaar */
+				nav ul{
+					flex-wrap: wrap;
+				}
+				/* kruisje in zoekbalk naar links verplaatst */
+				.clear{
+					left: 6vmin;
+					top: 2.5vmin;
 				}
 			}
+
 
 
 
@@ -225,21 +226,23 @@ section:nth-of-type(1){
 	::-webkit-scrollbar-track{
 		background-color: var(--color-scroll);
 		border-radius: 100vw;
+		margin: 1em;
 	} 
 		/* plaatsing van waar de bar is */
 		::-webkit-scrollbar-thumb{
-			background-color: var(--color-gray);
-			border: .22em solid var(--color-scroll);
-			border-radius: 100vw;
+			background-color: var(--color-black);
+			border: .19em solid var(--color-scroll);
+			/* border-radius: 100vw; */
 		}
 /* bron:https://stackoverflow.com/questions/50817727/change-scrollbar-height */
+
 
 
 
 /* ****************************************************** */
 				/* NAVIGATIE-BALK STIJLING */
 /* ****************************************************** */
-
+/* container */
 nav{
 	position: fixed;
 	left: 0;
@@ -249,9 +252,7 @@ nav{
 	padding: 0 2.5em;
 	height: 15vmin;
 	
-	background-color: #c4c4c4bb;
-	font-family: var(--h1-fontfamily);
-
+	background-color: #c4c4c4f1;
 	z-index: 1;
 }
 	/* plaatsing van de tekst */
@@ -264,23 +265,18 @@ nav{
 		color: var(--color-black); 
 	}
 		nav ul li{
+			font-family: var(--h1-fontfamily);
 			font-size: 5.1vmin;	
 			margin-right: 1em;
 		}
 
-		/* 1 song per keer zien op mobiel */
-		@media (max-width: 375px){
-			nav ul{
-				flex-wrap: wrap;
-			}
-		}
-				
 	/* hover functie op de nav */
 	nav ul li:hover {
+		cursor: pointer;
 		color: var(--color-pink);
 		transition: .3s;
-		cursor: pointer;
 	}
+
 
 
 
@@ -293,23 +289,23 @@ nav{
 		border-radius: .2em;
 		
 		border: none;
-		outline-color: var(--color-pink);
-		
+		outline-color: var(--color-blue);
 		
 		padding: .9em;
 		font-size: 3vmin;
+
 		display: none;
+		text-indent: inherit;
 	}
 		.searchbar.active{
 			display: unset;
 			width: 56vmin;
-		
 		}
 	
 	/* kruisje bij zoeken */
 	.clear{
 		position: relative;
-		left: 23vmin;
+		left: 25vmin;
 		bottom: 1.5vmin;
 		font-size: 3vmin;
 		transform: translate(-50%);
@@ -322,60 +318,62 @@ nav{
 		display: none;
 
 	}
-		@media (max-width: 375px){
-			.clear{
-				left: 6vmin;
-				top: 2.5vmin;
-			}
+		.clear::before{
+			position: absolute;
+			content: '';
+			width: .3em;
+			height: 1em;
+			background: var(--color-black);
+			transform: rotate(45deg);
 		}
-			.clear::before{
-				position: absolute;
-				content: '';
-				width: .3em;
-				height: 1em;
-				background: var(--color-black);
-				transform: rotate(45deg);
+		.clear::after{
+			position: absolute;
+			content: '';
+			width: .3em;
+			height: 1em;
+			background: var(--color-black);
+			transform: rotate(315deg);
+		}
+			.clear.active{
+				display: unset;
 			}
-			.clear::after{
-				position: absolute;
-				content: '';
-				width: .3em;
-				height: 1em;
-				background: var(--color-black);
-				transform: rotate(315deg);
-			}
-				.clear.active{
-					display: unset;
-				}
 
-
+			.sort.asc::after {
+				content: "(az↓)";
+				padding-left: .25em;
+				font-weight:normal;
+			  }
+			  
+			  .sort.desc::after {
+				content: "(za↓)";
+				padding-left: .25em;
+				font-weight:normal;
+			  }
 
 
 /* ****************************************************** */
 				/* VIDEO CONTAINER STIJLING  */
 /* ****************************************************** */
+
 /* container van section 2 */
-section:nth-of-type(2){
-	/* background-color: var(--color-gray); */
-}
 	section:nth-of-type(2) ol{
 		display:flex;
 		margin: 8vmin;
 		margin-top: 1em;
-		padding: 0;
-		
+		padding: 1em;
+
+		background-color: var(--color-black);
 		list-style:none; 
 		overflow-x: scroll;
-		
-		background-color: var(--color-blackish);
 	}
-		iframe {
+		img {
 			width:40vmin;
 			height: calc(var(--size-vid) / 560 * 315);
 			aspect-ratio: 1/1;
-			margin-top: .5em;
+			margin-top: -4em;
 			margin-right: 2em;		
 		} 
+
 
 
 		
@@ -383,9 +381,12 @@ section:nth-of-type(2){
 					/* H3 + P STIJLING */
 /* ****************************************************** */
 
-h3{
+/* h3{
+	position: relative;
+	top: 3em;
+	left: 1em;
 	font-family: var(--h2-fontfamily);
-	color:rgb(43, 17, 17);
+	color: var(--color-gray);
 	font-weight: bold;
 	font-size: 4vmin;
 	
@@ -395,7 +396,30 @@ h3{
 		color: rgb(158, 90, 90);
 		font-weight: bold;
 		font-size: 3.1vmin;
+	} */
+
+	h3{
+		font-family: var(--h2-fontfamily);
+		color:rgb(216, 75, 75);
+		font-weight: bold;
+		font-size: 5.4vmin;
+	
+		position: relative;
+		top: 5.5em;
+		margin-right: 1em;
+		padding: .4em;
 	}
+		p{
+			font-family: var(--h2-fontfamily);
+			color: rgb(211, 99, 99);
+			font-weight: bold;
+			font-size: 3.1vmin;
+	
+			position: relative;
+			top: 8.7em;
+			left: .4em;
+			padding: .4em;
+		}
 
 	/* mobiel */
 	@media (max-width: 375px){
@@ -403,9 +427,11 @@ h3{
 			font-size: 7vmin;
 		}
 			iframe {
-				width:84vmin;
+				width:75vmin;
 			} 
 	}
+
+
 
 
 /* ****************************************************** */
@@ -423,8 +449,7 @@ li.sortable-drag{
 	cursor: grabbing;
 }	
 
-/* li p::before{
-	content: "uit: ";
-} */
-
+li p::before{
+	content: " ";
+}
 
