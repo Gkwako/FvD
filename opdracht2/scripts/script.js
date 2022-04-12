@@ -39,10 +39,10 @@ new Sortable(playList, {
 
 
 // --------------------------- Searchbar
-var zoekbalk = document.querySelector(".search");
-var zoeken = document.querySelector(".searchbar");
+const zoekbalk = document.querySelector(".search");
+const zoeken = document.querySelector(".searchbar");
 
-var kruisje = document.querySelector(".clear");
+const kruisje = document.querySelector(".clear");
 
 zoekbalk.onclick = function(){
   console.log("open searchbar");
@@ -60,11 +60,11 @@ kruisje.onclick = function(){
 // ---------------------------Search song
 console.log("search songs");
 
-var options = {
+const options = {
   valueNames: [ 'name', 'album' ]
 };
 
-var zoekLijst = new List('theList', options);
+const zoekLijst = new List('theList', options);
 
 
 console.log("alfabetische volgorde songs");
