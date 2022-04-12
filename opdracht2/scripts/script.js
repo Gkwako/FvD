@@ -60,14 +60,14 @@ kruisje.onclick = function(){
 // ---------------------------Search song
 console.log("alfabetische volgorde songs");
 
-// var options = {
-//   valueNames: [ 'name', 'song' ]
-// };
+var options = {
+  valueNames: [ 'name', 'song' ]
+};
 
-// var zoekLijst = new List('playList', options);
+var zoekLijst = new List('theList', options);
 
 
-// zoekLijst.sort('name', { order: "asc" });
+zoekLijst.sort('name', { order: "asc" });
 
 
 

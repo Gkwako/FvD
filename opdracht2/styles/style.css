@@ -13,7 +13,6 @@
 
 
 
-
 /* ****************************************************** */
 					/* CUSTOM PROPERTIES */
 /* ****************************************************** */
@@ -35,7 +34,6 @@
 
 	/* scrollbar */
 	--color-scroll: rgba(34, 35, 36, 0.877);
-
 }
 
 
@@ -114,7 +112,6 @@ main section h2 {
 	padding: .2em .3em;
 	background-color: var(--color-black);
 	
-
 	font-family: var(--h2-fontfamily);
 	color: var(--color-pink);
 	font-weight: bold;
@@ -129,11 +126,7 @@ main section h2 {
 			margin-top: 4em;
 		}
 
-		/* section:nth-of-type(1) h2{
-			position: fixed;
 
-			z-index: 1;
-		} */
 
 
 /* ****************************************************** */
@@ -147,47 +140,14 @@ main section:nth-of-type(1) ol li {
     top: 2.5vmin;
     background-color: #d3c8e7b6;
 }
-
-/* container van de empty */
-	/* section:first-of-type ol{
-		display:grid;
-		grid-template-columns:1fr 1fr 1fr 1fr;
-		gap: 2em;
-		
-		background-color: var(--color-black);
-		padding:1em;
-		list-style:none; 
-		
-		margin: 8vmin;
-		margin-top: 1em;
-		
-		overflow-x: scroll;
-	} */
-		/* de empties */
-		/* section:first-of-type li{
-			background-color: #d3c8e7b6;
-			position: relative;
-			top: 8vmin;
-			height: 8em;
-			aspect-ratio:1/1;
-			width: 40vmin; 
-		} */
-			/* tekst in de empty */
-			/* section:first-of-type ol :empty::after{ 
-				content: "Sleep hier je favo's";
-				font-family: var(--h3-fontfamily);
-				color: rgba(255, 255, 255, 0.562);
-
-				font-weight: bold;
-				font-size: 3vmin;
-
-				position: relative;
-				top: 5.5em;
-				left: 2em;
-			
-				display: flex;
-				margin-right: 3em;
-			} */
+	section:first-of-type ol :empty::after{
+		content: "Sleep je favo liedjes...";
+		font-family: var(--h2-fontfamily);
+		position: relative;
+		font-size: 3vmin;
+		top: 8em;
+		left: 4em;
+	}
 
 
 
@@ -211,6 +171,7 @@ main section ol{
 	margin-top: 1em;
 	background-color: var(--color-black);
 }
+ 
 
 
 
@@ -226,15 +187,6 @@ main section:nth-of-type(2) ol li {
     background-color: #d3c8e7b6;
 }
 
-main section:nth-of-type(2) ol::before{
-	content:"❤️";
-	position: absolute;
-	top: 57em;
-	left: 25em;
-	size: 3em;
-	cursor: pointer;
-}
-
 	iframe {
 		display:block;
 		width: 50vmin;
@@ -242,6 +194,7 @@ main section:nth-of-type(2) ol::before{
 		padding: 1em;
 		padding-top: 1.5em;
 	}
+
 
 
 
@@ -269,15 +222,7 @@ h3{
 		color: var(--color-redish);
 	}
 
-/* mobiel */
-@media (max-width: 375px){
-	h3{
-		font-size: 7vmin;
-	}
-		img {
-			width:75vmin;
-		} 
-}
+
 
 
 /* ****************************************************** */
@@ -322,19 +267,16 @@ nav{
 
 
 
-
-
 /* ****************************************************** */
 				/* ZOEKBALK STIJLING */
 /* ****************************************************** */
 
 	.searchbar {
 		position: absolute;
+		top: 1em;
 		border-radius: .2em;
 		
 		border: none;
-		outline-color: var(--color-blue);
-		
 		padding: .9em;
 		font-size: 3vmin;
 
@@ -345,15 +287,15 @@ nav{
 			width: 56vmin;
 		}
 
-
 	
 	/* kruisje bij zoeken */
 	.clear{
 		position: relative;
-		left: 17.4vmin;
-		bottom: 1.5vmin;
+		top: 3.3vmin;
+		left: 17.7vmin;
 		font-size: 3vmin;
 		transform: translate(-50%);
+		height: 1em;
 
 		cursor: pointer;
 		
@@ -380,55 +322,16 @@ nav{
 				display: unset;
 			}
 
-			.sort.asc::after {
-				content: "(az↓)";
-				padding-left: .25em;
-				font-weight:normal;
-			  }
-				.sort.desc::after {
-					content: "(za↓)";
+			/* sorteren */
+				.sort.asc::after {
+					content: "(az↓)";
+					padding-left: .25em;
+					font-weight:normal;
 				}
-
-				
-
-
-	
-
-
-
-/* ****************************************************** */
-				/* PLAY-BUTTON STIJLING */
-/* ****************************************************** */
-
-/* .button {
-	background: transparent;
-	box-sizing: border-box;
-  
-	border-color: transparent var(--color-gray);
-	transition: 100ms all ease;
-	cursor: pointer;
-
-	position: absolute;
-
-	bottom: -2em;
-	left: 29.5vmin;
-	z-index: 1;
-  
-	
-	border-style: solid;
-	border-width: 1.5em 0 1.5em 2.5em;
-} */
-  
-	/* .paused {
-	  border-style: double;
-	  border-width: 0 0 0px 2.5em;
-	  height: 7vmin;
-	}
-  
-	.button:hover {
-	  border-color: transparent var(--color-pink);
-	} */
-  
+					.sort.desc::after {
+						content: "(za↓)";
+					}
+			
 
 
 
@@ -446,9 +349,6 @@ li.sortable-drag{
 	cursor: grabbing;
 }	
 
-/* /* li p::before{
-	content: " ";
-} */
 
 
 
@@ -515,28 +415,8 @@ header span:nth-of-type(1) h1::before{
 	position: absolute;
 	left: -0.0em;
 	right: -0.0em;
-}
-
-	/* .fav {
-		padding-left: -8vmin;
-		
-		margin: 6em;
-		margin-top: -2em;
-		margin-left: 4em;
-		margin-right: 90vmin;
-		background-color: var(--color-black);
-	
 	}
-		header {
-			display: flex;
-		} 
-
-		#playlist{
-			position: relative;
-			left: 3em;
-		} */
 
 }
-
 
 

@@ -26,7 +26,7 @@
 
 	<main>
 		<!-- deel 1 -->
-		<section class="fav">
+		<section>
 			<h2 tabindex="0">Favourite</h2>
 				<ol>
 					<li id="empty1"></li>
@@ -37,18 +37,18 @@
 		</section>
 
 		<!-- deel 2 -->
-		<section id="playList">
+		<section id="theList">
 			<nav>
 				<ul>
 					<button class="search">Zoekbalk</button>
 						<input class="searchbar search" type="search" placeholder="wat zoek je?">
-						<span class="clear"></span>
+						<button class="clear"></button>
 					<button class="sort" data-sort="name">Naam</button> 
             	</ul>
 			</nav>
 
 			<h2 tabindex="0" >Nieuwe releases</h2>
-				<ol class="t-Walker musicList">
+				<ol id="playList" class="t-Walker musicList">
 					<li> 
 						<h3 class="name"></h3> 
 						<p class="song"></p>
@@ -56,7 +56,7 @@
 				</ol> 
 					
 			<h2 tabindex="0" >Populaire liedjes</h2>
-				<ol class="i-Dragons musicList">
+				<ol class="i-Dragons musicList list">
 					<li>
 						<h3 class="name"></h3>
 						<p class="song"></p>	
