@@ -489,8 +489,10 @@ li.sortable-drag{
 	}
 		section:first-of-type ol :empty::after{
 			content: "Plaats je favo liedjes...";
-			font-size: 7vmin;
-			top:4.3em;
+			position: relative;
+			font-size: 3vmin;
+			top: 7em;
+			left: 4em;
 		}
 	
 	/* nav-bar komt onder elkaar */
