@@ -53,7 +53,11 @@ body {
 		body {
 			background: var(--color-purple);
 		}
+		/* section dark */
+		main section h2 {
+			background-color: var(--color-black);
 	}
+}
 
 
 
@@ -186,13 +190,28 @@ main section:nth-of-type(2) ol li {
     top: 2.5vmin;
     background-color: #d3c8e7b6;
 }
-
 	iframe {
 		display:block;
 		width: 50vmin;
 		height: 40vmin;
 		padding: 1em;
 		padding-top: 1.5em;
+		outline: none;
+	}
+	/* album */
+	.list img {
+		display:block;
+		width: 44vmin;
+		height: 40vmin;
+		padding: 1em;
+		padding-top: 1.5em;
+		cursor: pointer;
+	}
+
+	.list :hover {
+		opacity: 1 ;
+		color: var(--color-pink);
+		transition: .3s;
 	}
 
 
@@ -204,8 +223,8 @@ main section:nth-of-type(2) ol li {
 	
 h3{
 	position: relative;
-	top: .3em;
-	left: .7em;
+	top: .2em;
+	left: .4em;
 
 	font-family: var(--h2-fontfamily);
 	font-size: 4.5vmin;
@@ -213,8 +232,8 @@ h3{
 }
 	p{
 		position: relative;
-		top: .6em;
-		left: 1.1em;
+		top: .4em;
+		left: .6em;
 
 		font-family: var(--h2-fontfamily);
 		font-weight: bold;
@@ -245,8 +264,8 @@ nav{
 	nav ul {
 		display: flex;
 		justify-content: center;
-		padding: 0;
-		height: 100%;
+		padding-top: 2vmin;
+		align-items: flex-end;
 	}
 		nav ul button{
 			background-color: transparent;
@@ -281,6 +300,7 @@ nav{
 		font-size: 3vmin;
 
 		display: none;
+		width: 56vmin;
 	}
 		.searchbar.active{
 			display: unset;
@@ -291,7 +311,7 @@ nav{
 	/* kruisje bij zoeken */
 	.clear{
 		position: relative;
-		top: 3.3vmin;
+		top: -3.6vmin;
 		left: 17.7vmin;
 		font-size: 3vmin;
 		transform: translate(-50%);

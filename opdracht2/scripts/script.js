@@ -58,17 +58,19 @@ kruisje.onclick = function(){
 
 
 // ---------------------------Search song
-console.log("alfabetische volgorde songs");
+console.log("search songs");
 
 var options = {
-  valueNames: [ 'name', 'song' ]
+  valueNames: [ 'name', 'album' ]
 };
 
 var zoekLijst = new List('theList', options);
-console.log("1");
+
+
+console.log("alfabetische volgorde songs");
 
 zoekLijst.sort('name', { order: "asc" });
-console.log("2");
+
 
 
 
@@ -76,14 +78,12 @@ console.log("2");
 // --------------------------- API Songs
 console.log("music Time");
 
-// // api 
-// // https://www.theaudiodb.com
-// // https://www.theaudiodb.com/api_guide.php
+// // api // // https://www.theaudiodb.com // 
+// https://www.theaudiodb.com/api_guide.php
 const urlBase = "https://theaudiodb.com/api/v1/json/2/mvid.php?i=";
 
 //lists
 const listWalker = document.querySelector('ol.t-Walker');
-const listDragons = document.querySelector('ol.i-Dragons');
 const listSmith = document.querySelector('ol.s-smith');
 
 // artists
@@ -91,12 +91,6 @@ const TomWalker = {
 	"id": "152173",
 	"name": "Tom Walker",
 	"list": listWalker
-};
-
-const ImagineDragons = {
-	"id": "114415",
-	"name": "Imagine Dragons",
-	"list": listDragons
 };
 
 const SamSmith = {
@@ -186,8 +180,6 @@ async function getData(URL) {
 // vul de nirvana list
 // het object van de artiest wordt meegegeven
 getVideos(TomWalker);
-
-getVideos(ImagineDragons);
 
 getVideos(SamSmith);
 
