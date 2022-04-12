@@ -167,19 +167,37 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  Dit is het eindresultaat geworden.
+   <img src="readme-images/f1.png" width="375px" alt="ontwerp opdracht 2">
+   <img src="readme-images/f2.png" width="375px" alt="ontwerp opdracht 2">
+   <img src="readme-images/f3.png" width="375px" alt="ontwerp opdracht 2">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  Ik vond dit een van de moeilijkste frontend opdrachten die ik ooit heb gehad. Het eindresultaat is niet helemaal hoe ik het wilde maar heb heel veel tijd hier aanbesteeds waardoor ik het wel prima vind zo. 
+
+  Hier zie je een beetje hoe het proces is gegaan, van schetsen tot eindoplevering.
+
+  <img src="readme-images/schets2.png" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/f1.png" width="375px" alt="ontwerp opdracht 2">
+
+  <img src="readme-images/empty1.png" width="375px" alt="ontwerp opdracht 2">
+
+  <img src="readme-images/f1.png" width="375px" alt="ontwerp opdracht 2">
+<img src="readme-images/f2.png" width="375px" alt="ontwerp opdracht 2">
+<img src="readme-images/f3.png" width="375px" alt="ontwerp opdracht 2">
+
+<video src="../readme-images/logo6.mov"></video>
+
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  Alles ging wel miss.....ik kon niet achterhalen hoe je alle functies met elkaar moest gaan linken. De search en sort met de API linken ging voor geen meter, heb dus moeten improviseren waardoor ik toch wel deze elemeten heb mee kunnen nemen. 
 </details>
 
 
