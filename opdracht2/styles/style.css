@@ -19,8 +19,6 @@
 /* ****************************************************** */
 
 :root {
-	--color-scheme: light dark; /* both supported */ 
-
 	/* color */
 	--color-black:#111;
 	--color-blackish:rgba(0, 0, 0, 0.048); 
@@ -28,6 +26,7 @@
 	--color-gray:#C4C4C4; 
 	--color-pink: palevioletred;
 	--color-purple:rgb(167, 119, 167);
+	--color-redish:rgb(90, 28, 28);
 
 	/* fontfamily */
 	--h1-fontfamily: flegrei, sans-serif;
@@ -51,22 +50,16 @@ body {
 	padding: 2.5em 2.5em calc(4em + 2.5em) 2.5em;
 	line-height: 1;
 }
-
-
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--color-purple);
+	/* dark mode op scherm */
+	@media (prefers-color-scheme: dark) {
+		body {
+			background: var(--color-purple);
+		}
 	}
-
-	
-}
 
 
 
 		
-	
-
 /* ****************************************************** */
 					/* LOGO STIJLING */
 /* ****************************************************** */
@@ -84,67 +77,48 @@ header span:nth-of-type(1) h1{
 	header span:nth-of-type(1) h1::before{
 		content: "";
 		position: absolute;
-		left: -.3em;
-		right: -.3em;
+		left: -0.3em;
+		right: -0.3em;
 		top: 50%;
 		transform: translateY(calc(-25% - 6px)); /* zorgt ervoor dat de plaatsing van de stroke in het midden blijft */
 		height: .23em;
 		background-color: var(--color-gray);
 	}
 
-
-
-	
-/* ****************************************************** */
-					/* DARK-MODE STIJLING */
-/* ****************************************************** */
-
-/* header button{
-	position: absolute;
-	top: 33vmin;
-	right: 2em;
-	font-size: 4.5vmin;
-	
-	border: none;
-	outline-color: white;
-		
-	border-radius: 1em;
-	padding: .5em;
-
-	background-color: var(--color-scroll);
-}
-	header button:hover{
-		background-color: rgba(27, 11, 83, 0.719);
-	}
-		.darkmode{
-			background-color:rgba(27, 11, 83, 0.719);
-		}
-			.darkmode button::after{
-				content: '🌔';	
+		/* animatie op gray balk, wordt een punt */
+		@keyframes lineDisappears {
+			0%, 20% {
+				left: 0%;
+				transform: translateY(calc(-25% - 6px));
+			}
+			100% {
+				left: 100%;
+				transform: translateY(calc(0px));
 				position: absolute;
-				left: .5em;
-			} */
-
-
-
-			
+			}
+		}
 		
+		h1::before {
+			animation: lineDisappears 3s linear forwards;
+		}
+
+
+					
 			
 /* ****************************************************** */
 					/* H2 STIJLING */
 /* ****************************************************** */
 
 main section h2 {
-	padding: .2em;
+	position: absolute;
+	padding: .2em .3em;
 	background-color: var(--color-black);
+	
 
 	font-family: var(--h2-fontfamily);
 	color: var(--color-pink);
 	font-weight: bold;
 	font-size: 8vmin;
-	
-	margin: 1em;
-	margin-bottom: .3em;
 }
 	/* breedte van de sections */		
 	main section {
@@ -152,18 +126,30 @@ main section h2 {
 	}
 	/* ruimte tussen de bovenste section 'fav' */
 		main section + section{ /* + geeft aan "inclusief" dat */
-			margin-top: 3.4em;
+			margin-top: 4em;
 		}
 
+		/* section:nth-of-type(1) h2{
+			position: fixed;
 
+			z-index: 1;
+		} */
 
 
 /* ****************************************************** */
 				/* EMPTY FIELD STIJLING */
 /* ****************************************************** */
+main section:nth-of-type(1) ol li {
+    min-width: 50vmin;
+	height: 50vmin;
+	border-radius:1rem;
+    position: relative;
+    top: 2.5vmin;
+    background-color: #d3c8e7b6;
+}
 
 /* container van de empty */
-	section:first-of-type ol{
+	/* section:first-of-type ol{
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr 1fr;
 		gap: 2em;
@@ -176,17 +162,19 @@ main section h2 {
 		margin-top: 1em;
 		
 		overflow-x: scroll;
-	}
+	} */
 		/* de empties */
-		section:first-of-type li{
+		/* section:first-of-type li{
 			background-color: #d3c8e7b6;
-			/* width:11em; */
+			position: relative;
+			top: 8vmin;
+			height: 8em;
 			aspect-ratio:1/1;
 			width: 40vmin; 
-		}
+		} */
 			/* tekst in de empty */
-			section:first-of-type ol :empty::after{ 
-				content: "Sleep een liedje hier naar toe..";
+			/* section:first-of-type ol :empty::after{ 
+				content: "Sleep hier je favo's";
 				font-family: var(--h3-fontfamily);
 				color: rgba(255, 255, 255, 0.562);
 
@@ -199,30 +187,255 @@ main section h2 {
 			
 				display: flex;
 				margin-right: 3em;
+			} */
+
+
+
+
+/* ****************************************************** */
+		/* CONTAINER VAN ALLE SECTIONS STIJLING  */
+/* ****************************************************** */
+
+/* container sections */
+main section ol{
+    display: flex;
+    align-items: center;
+	gap: 1em;
+
+    overflow-x: scroll;
+	list-style: none;
+	
+	padding: 4vmin;
+	padding-top: 10vmin;
+	margin: 8vmin;
+	margin-top: 1em;
+	background-color: var(--color-black);
+}
+
+
+
+/* ****************************************************** */
+			/* IMG/VIDEO CONTAINER STIJLING  */
+/* ****************************************************** */
+
+main section:nth-of-type(2) ol li {
+	height: 50vmin;
+	border-radius:1rem;
+    position: relative;
+    top: 2.5vmin;
+    background-color: #d3c8e7b6;
+}
+	iframe {
+		display:block;
+		width: 50vmin;
+		height: 40vmin;
+		padding: 1em;
+		padding-top: 1.5em;
+	}
+
+
+
+/* ****************************************************** */
+					/* H3 + P STIJLING */
+/* ****************************************************** */
+	
+h3{
+	position: relative;
+	top: .3em;
+	left: .7em;
+
+	font-family: var(--h2-fontfamily);
+	font-size: 4.5vmin;
+	color: var(--color-black);
+}
+	p{
+		position: relative;
+		top: .6em;
+		left: 1.1em;
+
+		font-family: var(--h2-fontfamily);
+		font-weight: bold;
+		font-size: 3vmin;
+		color: var(--color-redish);
+	}
+
+/* mobiel */
+@media (max-width: 375px){
+	h3{
+		font-size: 7vmin;
+	}
+		img {
+			width:75vmin;
+		} 
+}
+
+
+/* ****************************************************** */
+				/* NAVIGATIE-BALK STIJLING */
+/* ****************************************************** */
+/* container */
+nav{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	padding: 0 2.5em;
+	height: 15vmin;
+	
+	background-color: #c4c4c4f1;
+	z-index: 2;
+}
+	/* plaatsing van de button */
+	nav ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		height: 100%;
+	}
+		nav ul button{
+			background-color: transparent;
+			color: var(--color-black); 
+			border: none;
+			font-family: var(--h1-fontfamily);
+			font-size: 6vmin;	
+			margin: .3em;
+		}
+
+	/* hover functie op de nav */
+	nav ul button:hover {
+		cursor: pointer;
+		color: var(--color-pink);
+		transition: .3s;
+	}
+
+
+
+/* ****************************************************** */
+				/* ZOEKBALK STIJLING */
+/* ****************************************************** */
+
+	.searchbar {
+		position: absolute;
+		border-radius: .2em;
+		
+		border: none;
+		outline-color: var(--color-blue);
+		
+		padding: .9em;
+		font-size: 3vmin;
+
+		display: none;
+	}
+		.searchbar.active{
+			display: unset;
+			width: 56vmin;
+		}
+
+
+	
+	/* kruisje bij zoeken */
+	.clear{
+		position: relative;
+		left: 17.4vmin;
+		bottom: 1.5vmin;
+		font-size: 3vmin;
+		transform: translate(-50%);
+
+		cursor: pointer;
+		
+		align-items: center;
+		display: none;
+	}
+		.clear::before{
+			position: absolute;
+			content: '';
+			width: .3em;
+			height: 1em;
+			background: var(--color-black);
+			transform: rotate(45deg);
+		}
+		.clear::after{
+			position: absolute;
+			content: '';
+			width: .3em;
+			height: 1em;
+			background: var(--color-black);
+			transform: rotate(315deg);
+		}
+			.clear.active{
+				display: unset;
 			}
 
-			/* emptie field stijling, 1 song per keer zien op mobiel */
-			@media (max-width: 375px){
-				section:first-of-type li{
-					width: 75vmin; 
+			.sort.asc::after {
+				content: "(az↓)";
+				padding-left: .25em;
+				font-weight:normal;
+			  }
+				.sort.desc::after {
+					content: "(za↓)";
 				}
-					section:first-of-type ol :empty::after{
-						content: "Plaats je favo liedjes...";
-						font-size: 7vmin;
-						top:4.3em;
-					}
+
 				
-				/* nav-bar komt onder elkaar */
-				nav ul{
-					flex-wrap: wrap;
-				}
-				/* kruisje in zoekbalk naar links verplaatst */
-				.clear{
-					left: 6vmin;
-					top: 2.5vmin;
-				}
-			}
 
+
+	
+
+
+
+/* ****************************************************** */
+				/* PLAY-BUTTON STIJLING */
+/* ****************************************************** */
+
+/* .button {
+	background: transparent;
+	box-sizing: border-box;
+  
+	border-color: transparent var(--color-gray);
+	transition: 100ms all ease;
+	cursor: pointer;
+
+	position: absolute;
+
+	bottom: -2em;
+	left: 29.5vmin;
+	z-index: 1;
+  
+	
+	border-style: solid;
+	border-width: 1.5em 0 1.5em 2.5em;
+} */
+  
+	/* .paused {
+	  border-style: double;
+	  border-width: 0 0 0px 2.5em;
+	  height: 7vmin;
+	}
+  
+	.button:hover {
+	  border-color: transparent var(--color-pink);
+	} */
+  
+
+
+
+/* ****************************************************** */
+				/* GRAB STIJLING */
+/* ****************************************************** */
+	
+li{
+	cursor: grab;
+}	
+li.sortable-ghost {
+	opacity:.25;
+  } 
+li.sortable-drag{
+	cursor: grabbing;
+}	
+
+/* /* li p::before{
+	content: " ";
+} */
 
 
 
@@ -251,217 +464,54 @@ main section h2 {
 
 
 
+
 /* ****************************************************** */
-				/* NAVIGATIE-BALK STIJLING */
+					/* MEDIA QUERY */
 /* ****************************************************** */
-/* container */
-nav{
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	
-	padding: 0 2.5em;
-	height: 15vmin;
-	
-	background-color: #c4c4c4f1;
-	z-index: 1;
-}
-	/* plaatsing van de tekst */
-	nav ul {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		list-style: none;
-		height: 100%;
-		color: var(--color-black); 
+
+@media (max-width: 375px){
+	/* emptie field stijling, 1 song per keer zien op mobiel */
+	section:first-of-type li{
+		width: 75vmin; 
 	}
-		nav ul li{
-			font-family: var(--h1-fontfamily);
-			font-size: 5.1vmin;	
-			margin-right: 1em;
-		}
-
-	/* hover functie op de nav */
-	nav ul li:hover {
-		cursor: pointer;
-		color: var(--color-pink);
-		transition: .3s;
-	}
-
-
-
-
-/* ****************************************************** */
-				/* ZOEKBALK STIJLING */
-/* ****************************************************** */
-
-	nav .searchbar {
-		position: absolute;
-		border-radius: .2em;
-		
-		border: none;
-		outline-color: var(--color-blue);
-		
-		padding: .9em;
-		font-size: 3vmin;
-
-		display: none;
-		text-indent: inherit;
-	}
-		.searchbar.active{
-			display: unset;
-			width: 56vmin;
-		}
-	
-	/* kruisje bij zoeken */
-	.clear{
-		position: relative;
-		left: 25vmin;
-		bottom: 1.5vmin;
-		font-size: 3vmin;
-		transform: translate(-50%);
-
-		cursor: pointer;
-		
-		display: flex;
-		
-		align-items: center;
-		display: none;
-
-	}
-		.clear::before{
-			position: absolute;
-			content: '';
-			width: .3em;
-			height: 1em;
-			background: var(--color-black);
-			transform: rotate(45deg);
-		}
-		.clear::after{
-			position: absolute;
-			content: '';
-			width: .3em;
-			height: 1em;
-			background: var(--color-black);
-			transform: rotate(315deg);
-		}
-			.clear.active{
-				display: unset;
-			}
-
-			.sort.asc::after {
-				content: "(az↓)";
-				padding-left: .25em;
-				font-weight:normal;
-			  }
-			  
-			  .sort.desc::after {
-				content: "(za↓)";
-				padding-left: .25em;
-				font-weight:normal;
-			  }
-
-
-/* ****************************************************** */
-				/* VIDEO CONTAINER STIJLING  */
-/* ****************************************************** */
-
-/* container van section 2 */
-	section:nth-of-type(2) ol{
-		display:flex;
-		margin: 8vmin;
-		margin-top: 1em;
-		padding: 1em;
-
-		background-color: var(--color-black);
-		list-style:none; 
-		overflow-x: scroll;
-	}
-		img {
-			width:40vmin;
-			height: calc(var(--size-vid) / 560 * 315);
-			aspect-ratio: 1/1;
-			margin-top: -4em;
-			margin-right: 2em;		
-		} 
-
-
-
-		
-/* ****************************************************** */
-					/* H3 + P STIJLING */
-/* ****************************************************** */
-
-/* h3{
-	position: relative;
-	top: 3em;
-	left: 1em;
-	font-family: var(--h2-fontfamily);
-	color: var(--color-gray);
-	font-weight: bold;
-	font-size: 4vmin;
-	
-}
-	p{
-		font-family: var(--h2-fontfamily);
-		color: rgb(158, 90, 90);
-		font-weight: bold;
-		font-size: 3.1vmin;
-	} */
-
-	h3{
-		font-family: var(--h2-fontfamily);
-		color:rgb(216, 75, 75);
-		font-weight: bold;
-		font-size: 5.4vmin;
-	
-		position: relative;
-		top: 5.5em;
-		margin-right: 1em;
-		padding: .4em;
-	}
-		p{
-			font-family: var(--h2-fontfamily);
-			color: rgb(211, 99, 99);
-			font-weight: bold;
-			font-size: 3.1vmin;
-	
-			position: relative;
-			top: 8.7em;
-			left: .4em;
-			padding: .4em;
-		}
-
-	/* mobiel */
-	@media (max-width: 375px){
-		h3{
+		section:first-of-type ol :empty::after{
+			content: "Plaats je favo liedjes...";
 			font-size: 7vmin;
+			top:4.3em;
 		}
-			iframe {
-				width:75vmin;
-			} 
-	}
-
-
-
-
-/* ****************************************************** */
-				/* GRAB STIJLING */
-/* ****************************************************** */
 	
-li{
-	cursor: grab;
-}	
-li.sortable-ghost {
-	/* jouw code hier */
-	opacity:.25;
-  }
-li.sortable-drag{
-	cursor: grabbing;
-}	
-
-li p::before{
-	content: " ";
+	/* nav-bar komt onder elkaar */
+	nav ul{
+		flex-wrap: wrap;
+	}
+	/* kruisje in zoekbalk naar links verplaatst */
+	.clear{
+		left: 17.4vmin;
+		top: -1.5vmin;
+	}
 }
 
+
+
+@media (min-width: 1000px){
+/* grijze streep op logo */
+header span:nth-of-type(1) h1::before{
+	content: "";
+	position: absolute;
+	left: -1em;
+	right: 3.5em;
+	}
+	/* lijn verplaats zich */
+	@keyframes lineDisappears {
+		0%, 20% {
+			left: 0%;
+			transform: translateY(calc(-25% - 6px));
+		}
+		100% {
+			left: 69.5%;
+			transform: translateY(calc(0px));
+			position: absolute;
+		}
+	}
+	
+}
