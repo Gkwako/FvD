@@ -65,9 +65,10 @@ var options = {
 };
 
 var zoekLijst = new List('theList', options);
-
+console.log("1");
 
 zoekLijst.sort('name', { order: "asc" });
+console.log("2");
 
 
 
