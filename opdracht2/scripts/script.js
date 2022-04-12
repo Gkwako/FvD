@@ -105,9 +105,6 @@ const SamSmith = {
 // - de lijst waar de video's van de artiest in moeten komen
 
 
-
-
-
 /****************/
 /* VUL DE LIJST */
 /****************/
@@ -153,9 +150,6 @@ function getVideos(artist) {
 }
 
 
-
-
-
 /****************/
 /* FETCH DATA   */
 /* RETURNS JSON */
@@ -169,10 +163,6 @@ async function getData(URL) {
 }
  
 
-
-
-
-
 /*********/
 /* START */
 /*********/
@@ -182,38 +172,4 @@ async function getData(URL) {
 getVideos(TomWalker);
 
 getVideos(SamSmith);
-
-
-
-// var options = {
-//   animation: 1000
-// }
-
-// var playList = document.getElementById('playList');
-// var sortable = Sortable.create('playList', options);
-
-
-// const playButton = document.querySelector(".button");
-
-// var audio1 = document.querySelector("#song1");
-
-
-
-
-// function buttonStart(){
-// 	if (audio1.paused){
-// 		console.log("button play");
-// 		audio1.play();
-// 		playButton.classList.add("paused");
-// 		return false;
-
-// 	} else { (audio1.play)
-// 		console.log("button stop");
-// 		audio1.pause();
-// 		playButton.classList.remove("paused");
-// 		return false;
-// 	}
-// }
-// playButton.addEventListener('click', buttonStart)
-
 

@@ -133,15 +133,30 @@ Zij hebben mij gevraagd om een nieuwe logo te ontwerpen waardoor het mij ook met
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
 
-  
+  Het was lastig om de zoekbalk te linken met de playlist omdat je ook tegelijkertijd de API moest linken.
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
 
+  Hiervoor heb ik gekozen om voor de helft met API's te werken en de andere helft met afbeeldingen. Afbeeldingen was wel makkelijker te linken.
+
 
 
   ### Bevinding 3:
-  ...
+  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+
+  De fav lijst fixed of sticky maken vond ik toch niet heel mooi ogen waardoor ik het zo heb gelaten.
+
+  #### oplossing:
+  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+
+  Maar voor de volgende keer zou ik meer moeten werken met grotes, zodat het wel mooi gaat ogen. 
+
+
+  ### Bevinding 4/5:
+  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+
+  De playlist heb ik gelaten hoe het is. Kon op dat moment geen beter idee vinden om dit op te lossen. Tevens heb ik ook de big screen het zelfde layout aangehouden als de small screen.
 </details>
 
 

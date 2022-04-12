@@ -427,7 +427,6 @@ li.sortable-drag{
 }
 
 
-
 @media (min-width: 1000px){
 /* grijze streep op logo */
 header span:nth-of-type(1) h1::before{
